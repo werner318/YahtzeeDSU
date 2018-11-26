@@ -102,7 +102,22 @@
     <None Include="Resources\dice-7.JPG" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dice-Blank.JPG" />
+    <None Include="Resources\Terning1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terning2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terning3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terning4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terning5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terning6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

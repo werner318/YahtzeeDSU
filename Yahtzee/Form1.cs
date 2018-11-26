@@ -41,7 +41,7 @@ namespace Yahtzee
             rand = new Random();
         }
         #endregion
-        private void btnPlay(object sender, EventArgs e)
+        private void btnRull(object sender, EventArgs e)
         {
             RollDice();
         }
@@ -50,7 +50,17 @@ namespace Yahtzee
         {
             for (int i = 0; i < dice.Length; i++)
                 dice[i] = rand.Next(1, 6 + 1);
-            btnDice1.Image = diceImages[]
+            dice1.Image = diceImages[dice[0]];
+            dice2.Image = diceImages[dice[1]];
+            dice3.Image = diceImages[dice[2]];
+            dice4.Image = diceImages[dice[3]];
+            dice5.Image = diceImages[dice[4]];
+
+        }
+
+        private void btnPlay(object sender, EventArgs e)
+        {
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -159,12 +169,6 @@ namespace Yahtzee
         {
 
         }
-
-        private void btnRull(object sender, EventArgs e)
-        {
-
-        }
-
         
         private void score(object sender, EventArgs e)
         {
@@ -177,6 +181,11 @@ namespace Yahtzee
         }
 
         private void sectionBonus(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDice4_Click(object sender, EventArgs e)
         {
 
         }
