@@ -71,6 +71,7 @@
             this.btnDice4 = new System.Windows.Forms.Button();
             this.btnDice5 = new System.Windows.Forms.Button();
             this.btnDice2 = new System.Windows.Forms.Button();
+            this.btnDice1 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -78,7 +79,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDice1 = new System.Windows.Forms.Button();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -610,6 +610,16 @@
             this.btnDice2.TabIndex = 19;
             this.btnDice2.UseVisualStyleBackColor = false;
             // 
+            // btnDice1
+            // 
+            this.btnDice1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDice1.Location = new System.Drawing.Point(27, 573);
+            this.btnDice1.Name = "btnDice1";
+            this.btnDice1.Size = new System.Drawing.Size(77, 61);
+            this.btnDice1.TabIndex = 18;
+            this.btnDice1.UseVisualStyleBackColor = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Yahtzee.Properties.Resources.dice_3;
@@ -673,17 +683,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(527, 82);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnDice1
-            // 
-            this.btnDice1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDice1.Image = global::Yahtzee.Properties.Resources.dice_blank;
-            this.btnDice1.Location = new System.Drawing.Point(27, 573);
-            this.btnDice1.Name = "btnDice1";
-            this.btnDice1.Size = new System.Drawing.Size(77, 61);
-            this.btnDice1.TabIndex = 18;
-            this.btnDice1.UseVisualStyleBackColor = false;
             // 
             // pictureBox15
             // 
