@@ -131,7 +131,7 @@
             this.threesBtn.Size = new System.Drawing.Size(77, 61);
             this.threesBtn.TabIndex = 2;
             this.threesBtn.UseVisualStyleBackColor = false;
-            this.threesBtn.Click += new System.EventHandler(this.numFours);
+            this.threesBtn.Click += new System.EventHandler(this.numThrees);
             // 
             // foursBtn
             // 

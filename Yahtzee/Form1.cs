@@ -242,50 +242,93 @@ namespace Yahtzee
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            
         }
-
+        private void OneToSixAdd(int num)
+        {
+            if (rollCheck != 0 && block == false)
+            {
+                int howMany = 0;
+                for (int i = 0; i < dice.Length; i++)
+                {
+                    if (dice[i] == num)
+                    {
+                        howMany++;
+                    }
+                }
+                if (howMany >= 1)
+                {
+                    switch (num)
+                    {
+                        case 1: onesBtn.Text = Convert.ToString(howMany * num); break;
+                        case 2: twosBtn.Text = Convert.ToString(howMany * num); break;
+                        case 3: threesBtn.Text = Convert.ToString(howMany * num); break;
+                        case 4: foursBtn.Text = Convert.ToString(howMany * num); break;
+                        case 5: fivesBtn.Text = Convert.ToString(howMany * num); break;
+                        case 6: sixesBtn.Text = Convert.ToString(howMany * num); break;
+                    }                        
+                }                    
+                else
+                {
+                    switch (num)
+                    {
+                        case 1: onesBtn.Text = "0"; break;
+                        case 2: twosBtn.Text = "0"; break;
+                        case 3: threesBtn.Text = "0"; break;
+                        case 4: foursBtn.Text = "0"; break;
+                        case 5: fivesBtn.Text = "0"; break;
+                        case 6: sixesBtn.Text = "0"; break;
+                    }
+                }
+            }
+            rollCheck = 0;
+            block = true;
+        }
         private void numOnes(object sender, EventArgs e)
         {
-            //if (diceResults)
+            OneToSixAdd(1);
         }
 
         private void numTwos(object sender, EventArgs e)
         {
+            OneToSixAdd(2);
+        }
 
+        private void numThrees(object sender, EventArgs e)
+        {
+            OneToSixAdd(3);
         }
 
         private void numFours(object sender, EventArgs e)
         {
-
+            OneToSixAdd(4);
         }
 
         private void numFives(object sender, EventArgs e)
         {
-
+            OneToSixAdd(5);
         }
 
         private void numSixes(object sender, EventArgs e)
         {
-
+            OneToSixAdd(6);
         }
 
         private int addDice(int[] numbers)
         {
             int score = (1 * numbers[0]) + (2 * numbers[1]) + (3 * numbers[2]) +
                             (4 * numbers[3]) + (5 * numbers[4]) + (6 * numbers[5]);
-            threeKindBtn.Text = Convert.ToString(score);
-            return 0;
+            return score;
         }
         private void threeOfKind(object sender, EventArgs e)
         {            
             if (threeKindBtn.Text == "" && rollCheck != 0 && block == false)
             {              
-                for (int i = 0; i < dice.Length; i++)
+                for (int i = 0; i < diceResults.Length; i++)
                 {
                     if (diceResults[i] == 3 || diceResults[i] == 4 || diceResults[i] == 5)
                     {
-                        addDice(diceResults);
+                        threeKindBtn.Text = Convert.ToString(addDice(diceResults));
                         break;
                     }         
                     else
@@ -301,11 +344,11 @@ namespace Yahtzee
             if (fourKindBtn.Text == "" && rollCheck != 0 && block == false)
             {
 
-                for (int i = 0; i < dice.Length; i++)
+                for (int i = 0; i < diceResults.Length; i++)
                 {
                     if (diceResults[i] == 4 || diceResults[i] == 5)
                     {
-                        addDice(diceResults);
+                        fourKindBtn.Text = Convert.ToString(addDice(diceResults));
                         break;
                     }
                     else
@@ -318,6 +361,27 @@ namespace Yahtzee
 
         private void fullHouse(object sender, EventArgs e)
         {
+            if (fullHouseBtn.Text == "" && rollCheck != 0 && block == false)
+            {
+                for (int i = 0; i < dice.Length; i++)
+                {
+                    if (diceResults[i] == 3 || diceResults[i] == 2)
+                    {
+                        for (int j = i+1; j <= dice.Length; j++)
+                        {
+                            if ((diceResults[i] == 3 && diceResults[j] == 2) || (diceResults[i] == 2 && diceResults[j] == 3))
+                            {
+                                fullHouseBtn.Text = "25";
+                                return;
+                            }
+                                
+                        }
+                    }
+                    else
+                        fullHouseBtn.Text = "0";
+                }
+            }
+            rollCheck = 0;
             block = true;
         }
 
@@ -340,14 +404,24 @@ namespace Yahtzee
 
         private void largeStraight(object sender, EventArgs e)
         {
+            if (highStraightBtn.Text == "" && rollCheck != 0 && block == false)
+            {
+                if (diceResults[0] >= 1 && diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1)
+                    highStraightBtn.Text = "40";
+                else if (diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1 && diceResults[5] >= 1)
+                    highStraightBtn.Text = "40";
+                else
+                    highStraightBtn.Text = "0";
+            }
             rollCheck = 0;
+            block = true;
         }
 
         private void yahtzee(object sender, EventArgs e)
         {
             if(yahtzeeBtn.Text == "" && rollCheck != 0 && block == false)
             {
-                for (int i = 0; i < diceResults.Length; i++)
+                for (int i = 0; i < dice.Length; i++)
                 {
                     if (diceResults[i] == 5)
                     {
@@ -365,6 +439,16 @@ namespace Yahtzee
 
         private void chance(object sender, EventArgs e)
         {
+            if (chanceBtn.Text == "" && rollCheck != 0 && block == false)
+            {
+
+                for (int i = 0; i < dice.Length; i++)
+                {
+                    chanceBtn.Text = Convert.ToString(addDice(diceResults));
+                    break;
+                }
+            }
+            rollCheck = 0;
             block = true;
         }
         
@@ -382,7 +466,5 @@ namespace Yahtzee
         {
 
         }
-
-        
     }
 }
