@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.threeSum = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.onesBtn = new System.Windows.Forms.Button();
+            this.twosBtn = new System.Windows.Forms.Button();
+            this.threesBtn = new System.Windows.Forms.Button();
+            this.foursBtn = new System.Windows.Forms.Button();
+            this.fivesBtn = new System.Windows.Forms.Button();
+            this.sixesBtn = new System.Windows.Forms.Button();
+            this.threeKindBtn = new System.Windows.Forms.Button();
+            this.fourKindBtn = new System.Windows.Forms.Button();
+            this.fullHouseBtn = new System.Windows.Forms.Button();
+            this.smallStraightBtn = new System.Windows.Forms.Button();
+            this.highStraightBtn = new System.Windows.Forms.Button();
+            this.yahtzeeBtn = new System.Windows.Forms.Button();
+            this.chanceBtn = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.bonusTextBox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -58,9 +58,18 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.scoreTextBox = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
             this.btnHold1 = new System.Windows.Forms.Button();
+            this.btnHold3 = new System.Windows.Forms.Button();
+            this.btnHold4 = new System.Windows.Forms.Button();
+            this.btnHold5 = new System.Windows.Forms.Button();
+            this.btnHold2 = new System.Windows.Forms.Button();
+            this.dice2 = new System.Windows.Forms.PictureBox();
+            this.dice3 = new System.Windows.Forms.PictureBox();
+            this.dice4 = new System.Windows.Forms.PictureBox();
+            this.dice5 = new System.Windows.Forms.PictureBox();
+            this.dice1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,16 +84,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnHold3 = new System.Windows.Forms.Button();
-            this.btnHold4 = new System.Windows.Forms.Button();
-            this.btnHold5 = new System.Windows.Forms.Button();
-            this.btnHold2 = new System.Windows.Forms.Button();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.dice1 = new System.Windows.Forms.PictureBox();
-            this.dice5 = new System.Windows.Forms.PictureBox();
-            this.dice4 = new System.Windows.Forms.PictureBox();
-            this.dice3 = new System.Windows.Forms.PictureBox();
-            this.dice2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dice2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -93,155 +98,150 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // onesBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(91, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 61);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.numOnes);
+            this.onesBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.onesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.onesBtn.Location = new System.Drawing.Point(91, 90);
+            this.onesBtn.Name = "onesBtn";
+            this.onesBtn.Size = new System.Drawing.Size(77, 61);
+            this.onesBtn.TabIndex = 0;
+            this.onesBtn.UseVisualStyleBackColor = false;
+            this.onesBtn.Click += new System.EventHandler(this.numOnes);
             // 
-            // button2
+            // twosBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.LightBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(91, 157);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 61);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.numTwos);
+            this.twosBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.twosBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twosBtn.Location = new System.Drawing.Point(91, 157);
+            this.twosBtn.Name = "twosBtn";
+            this.twosBtn.Size = new System.Drawing.Size(77, 61);
+            this.twosBtn.TabIndex = 1;
+            this.twosBtn.UseVisualStyleBackColor = false;
+            this.twosBtn.Click += new System.EventHandler(this.numTwos);
             // 
-            // threeSum
+            // threesBtn
             // 
-            this.threeSum.BackColor = System.Drawing.Color.LightBlue;
-            this.threeSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.threeSum.Location = new System.Drawing.Point(91, 224);
-            this.threeSum.Name = "threeSum";
-            this.threeSum.Size = new System.Drawing.Size(77, 61);
-            this.threeSum.TabIndex = 2;
-            this.threeSum.UseVisualStyleBackColor = false;
-            this.threeSum.Click += new System.EventHandler(this.numFours);
+            this.threesBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.threesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.threesBtn.Location = new System.Drawing.Point(91, 224);
+            this.threesBtn.Name = "threesBtn";
+            this.threesBtn.Size = new System.Drawing.Size(77, 61);
+            this.threesBtn.TabIndex = 2;
+            this.threesBtn.UseVisualStyleBackColor = false;
+            this.threesBtn.Click += new System.EventHandler(this.numFours);
             // 
-            // button4
+            // foursBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.LightBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(91, 291);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 61);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.numFours);
+            this.foursBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.foursBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.foursBtn.Location = new System.Drawing.Point(91, 291);
+            this.foursBtn.Name = "foursBtn";
+            this.foursBtn.Size = new System.Drawing.Size(77, 61);
+            this.foursBtn.TabIndex = 3;
+            this.foursBtn.UseVisualStyleBackColor = false;
+            this.foursBtn.Click += new System.EventHandler(this.numFours);
             // 
-            // button5
+            // fivesBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.LightBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(91, 357);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 61);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.numFives);
+            this.fivesBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.fivesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fivesBtn.Location = new System.Drawing.Point(91, 357);
+            this.fivesBtn.Name = "fivesBtn";
+            this.fivesBtn.Size = new System.Drawing.Size(77, 61);
+            this.fivesBtn.TabIndex = 4;
+            this.fivesBtn.UseVisualStyleBackColor = false;
+            this.fivesBtn.Click += new System.EventHandler(this.numFives);
             // 
-            // button6
+            // sixesBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.LightBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(91, 424);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 61);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.numSixes);
+            this.sixesBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.sixesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sixesBtn.Location = new System.Drawing.Point(91, 424);
+            this.sixesBtn.Name = "sixesBtn";
+            this.sixesBtn.Size = new System.Drawing.Size(77, 61);
+            this.sixesBtn.TabIndex = 5;
+            this.sixesBtn.UseVisualStyleBackColor = false;
+            this.sixesBtn.Click += new System.EventHandler(this.numSixes);
             // 
-            // button7
+            // threeKindBtn
             // 
-            this.button7.BackColor = System.Drawing.Color.LightBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(343, 86);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(77, 61);
-            this.button7.TabIndex = 11;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.threeOfKind);
+            this.threeKindBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.threeKindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.threeKindBtn.Location = new System.Drawing.Point(343, 86);
+            this.threeKindBtn.Name = "threeKindBtn";
+            this.threeKindBtn.Size = new System.Drawing.Size(77, 61);
+            this.threeKindBtn.TabIndex = 11;
+            this.threeKindBtn.UseVisualStyleBackColor = false;
+            this.threeKindBtn.Click += new System.EventHandler(this.threeOfKind);
             // 
-            // button8
+            // fourKindBtn
             // 
-            this.button8.BackColor = System.Drawing.Color.LightBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(343, 157);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(77, 61);
-            this.button8.TabIndex = 10;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.fourOfKind);
+            this.fourKindBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.fourKindBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fourKindBtn.Location = new System.Drawing.Point(343, 157);
+            this.fourKindBtn.Name = "fourKindBtn";
+            this.fourKindBtn.Size = new System.Drawing.Size(77, 61);
+            this.fourKindBtn.TabIndex = 10;
+            this.fourKindBtn.UseVisualStyleBackColor = false;
+            this.fourKindBtn.Click += new System.EventHandler(this.fourOfKind);
             // 
-            // button9
+            // fullHouseBtn
             // 
-            this.button9.BackColor = System.Drawing.Color.LightBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(343, 224);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(77, 61);
-            this.button9.TabIndex = 9;
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.fullHouse);
+            this.fullHouseBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.fullHouseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullHouseBtn.Location = new System.Drawing.Point(343, 224);
+            this.fullHouseBtn.Name = "fullHouseBtn";
+            this.fullHouseBtn.Size = new System.Drawing.Size(77, 61);
+            this.fullHouseBtn.TabIndex = 9;
+            this.fullHouseBtn.UseVisualStyleBackColor = false;
+            this.fullHouseBtn.Click += new System.EventHandler(this.fullHouse);
             // 
-            // button10
+            // smallStraightBtn
             // 
-            this.button10.BackColor = System.Drawing.Color.LightBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(343, 291);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(77, 61);
-            this.button10.TabIndex = 8;
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.smallStraight);
+            this.smallStraightBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.smallStraightBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.smallStraightBtn.Location = new System.Drawing.Point(343, 291);
+            this.smallStraightBtn.Name = "smallStraightBtn";
+            this.smallStraightBtn.Size = new System.Drawing.Size(77, 61);
+            this.smallStraightBtn.TabIndex = 8;
+            this.smallStraightBtn.UseVisualStyleBackColor = false;
+            this.smallStraightBtn.Click += new System.EventHandler(this.smallStraight);
             // 
-            // button11
+            // highStraightBtn
             // 
-            this.button11.BackColor = System.Drawing.Color.LightBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Location = new System.Drawing.Point(343, 355);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(77, 61);
-            this.button11.TabIndex = 7;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.largeStraight);
+            this.highStraightBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.highStraightBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.highStraightBtn.Location = new System.Drawing.Point(343, 355);
+            this.highStraightBtn.Name = "highStraightBtn";
+            this.highStraightBtn.Size = new System.Drawing.Size(77, 61);
+            this.highStraightBtn.TabIndex = 7;
+            this.highStraightBtn.UseVisualStyleBackColor = false;
+            this.highStraightBtn.Click += new System.EventHandler(this.largeStraight);
             // 
-            // button12
+            // yahtzeeBtn
             // 
-            this.button12.BackColor = System.Drawing.Color.LightBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(343, 422);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(77, 61);
-            this.button12.TabIndex = 6;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.yahtzee);
+            this.yahtzeeBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.yahtzeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.yahtzeeBtn.Location = new System.Drawing.Point(343, 422);
+            this.yahtzeeBtn.Name = "yahtzeeBtn";
+            this.yahtzeeBtn.Size = new System.Drawing.Size(77, 61);
+            this.yahtzeeBtn.TabIndex = 6;
+            this.yahtzeeBtn.UseVisualStyleBackColor = false;
+            this.yahtzeeBtn.Click += new System.EventHandler(this.yahtzee);
             // 
-            // button15
+            // chanceBtn
             // 
-            this.button15.BackColor = System.Drawing.Color.LightBlue;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Location = new System.Drawing.Point(343, 489);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(77, 61);
-            this.button15.TabIndex = 17;
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.chance);
+            this.chanceBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.chanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chanceBtn.Location = new System.Drawing.Point(343, 489);
+            this.chanceBtn.Name = "chanceBtn";
+            this.chanceBtn.Size = new System.Drawing.Size(77, 61);
+            this.chanceBtn.TabIndex = 17;
+            this.chanceBtn.UseVisualStyleBackColor = false;
+            this.chanceBtn.Click += new System.EventHandler(this.chance);
             // 
             // button20
             // 
@@ -294,20 +294,20 @@
             this.textBox2.Text = "Section Bonus +35";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // bonusTextBox
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Snow;
-            this.textBox3.Location = new System.Drawing.Point(97, 496);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(71, 38);
-            this.textBox3.TabIndex = 47;
-            this.textBox3.Text = "0/63";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.TextChanged += new System.EventHandler(this.sectionBonus);
+            this.bonusTextBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.bonusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bonusTextBox.ForeColor = System.Drawing.Color.Snow;
+            this.bonusTextBox.Location = new System.Drawing.Point(97, 496);
+            this.bonusTextBox.Multiline = true;
+            this.bonusTextBox.Name = "bonusTextBox";
+            this.bonusTextBox.Size = new System.Drawing.Size(71, 38);
+            this.bonusTextBox.TabIndex = 47;
+            this.bonusTextBox.Text = "0/63";
+            this.bonusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bonusTextBox.TextChanged += new System.EventHandler(this.sectionBonus);
             // 
             // textBox4
             // 
@@ -478,17 +478,17 @@
             this.textBox15.Text = "Small straight";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox16
+            // scoreTextBox
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(174, 2);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(177, 53);
-            this.textBox16.TabIndex = 60;
-            this.textBox16.Text = "0";
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox16.TextChanged += new System.EventHandler(this.score);
+            this.scoreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreTextBox.Location = new System.Drawing.Point(174, 2);
+            this.scoreTextBox.Multiline = true;
+            this.scoreTextBox.Name = "scoreTextBox";
+            this.scoreTextBox.Size = new System.Drawing.Size(177, 53);
+            this.scoreTextBox.TabIndex = 60;
+            this.scoreTextBox.Text = "0";
+            this.scoreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.scoreTextBox.TextChanged += new System.EventHandler(this.score);
             // 
             // button13
             // 
@@ -510,6 +510,115 @@
             this.btnHold1.TabIndex = 70;
             this.btnHold1.Text = "HOLD";
             this.btnHold1.UseVisualStyleBackColor = false;
+            this.btnHold1.Click += new System.EventHandler(this.holdDice1);
+            // 
+            // btnHold3
+            // 
+            this.btnHold3.BackColor = System.Drawing.Color.White;
+            this.btnHold3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHold3.Location = new System.Drawing.Point(225, 618);
+            this.btnHold3.Name = "btnHold3";
+            this.btnHold3.Size = new System.Drawing.Size(67, 37);
+            this.btnHold3.TabIndex = 22;
+            this.btnHold3.Text = "HOLD";
+            this.btnHold3.UseVisualStyleBackColor = false;
+            this.btnHold3.Click += new System.EventHandler(this.holdDice3);
+            // 
+            // btnHold4
+            // 
+            this.btnHold4.BackColor = System.Drawing.Color.White;
+            this.btnHold4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHold4.Location = new System.Drawing.Point(315, 618);
+            this.btnHold4.Name = "btnHold4";
+            this.btnHold4.Size = new System.Drawing.Size(67, 37);
+            this.btnHold4.TabIndex = 21;
+            this.btnHold4.Text = "HOLD";
+            this.btnHold4.UseVisualStyleBackColor = false;
+            this.btnHold4.Click += new System.EventHandler(this.holdDice4);
+            // 
+            // btnHold5
+            // 
+            this.btnHold5.BackColor = System.Drawing.Color.White;
+            this.btnHold5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHold5.Location = new System.Drawing.Point(405, 618);
+            this.btnHold5.Name = "btnHold5";
+            this.btnHold5.Size = new System.Drawing.Size(67, 37);
+            this.btnHold5.TabIndex = 20;
+            this.btnHold5.Text = "HOLD";
+            this.btnHold5.UseVisualStyleBackColor = false;
+            this.btnHold5.Click += new System.EventHandler(this.holdDice5);
+            // 
+            // btnHold2
+            // 
+            this.btnHold2.BackColor = System.Drawing.Color.White;
+            this.btnHold2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHold2.Location = new System.Drawing.Point(135, 618);
+            this.btnHold2.Name = "btnHold2";
+            this.btnHold2.Size = new System.Drawing.Size(67, 37);
+            this.btnHold2.TabIndex = 19;
+            this.btnHold2.Text = "HOLD";
+            this.btnHold2.UseVisualStyleBackColor = false;
+            this.btnHold2.Click += new System.EventHandler(this.holdDice2);
+            // 
+            // dice2
+            // 
+            this.dice2.BackColor = System.Drawing.Color.Teal;
+            this.dice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dice2.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.dice2.Location = new System.Drawing.Point(140, 552);
+            this.dice2.Name = "dice2";
+            this.dice2.Size = new System.Drawing.Size(57, 61);
+            this.dice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dice2.TabIndex = 75;
+            this.dice2.TabStop = false;
+            // 
+            // dice3
+            // 
+            this.dice3.BackColor = System.Drawing.Color.Teal;
+            this.dice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dice3.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.dice3.Location = new System.Drawing.Point(230, 552);
+            this.dice3.Name = "dice3";
+            this.dice3.Size = new System.Drawing.Size(57, 61);
+            this.dice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dice3.TabIndex = 74;
+            this.dice3.TabStop = false;
+            // 
+            // dice4
+            // 
+            this.dice4.BackColor = System.Drawing.Color.Teal;
+            this.dice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dice4.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.dice4.Location = new System.Drawing.Point(320, 552);
+            this.dice4.Name = "dice4";
+            this.dice4.Size = new System.Drawing.Size(57, 61);
+            this.dice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dice4.TabIndex = 73;
+            this.dice4.TabStop = false;
+            // 
+            // dice5
+            // 
+            this.dice5.BackColor = System.Drawing.Color.Teal;
+            this.dice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dice5.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.dice5.Location = new System.Drawing.Point(410, 552);
+            this.dice5.Name = "dice5";
+            this.dice5.Size = new System.Drawing.Size(57, 61);
+            this.dice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dice5.TabIndex = 72;
+            this.dice5.TabStop = false;
+            // 
+            // dice1
+            // 
+            this.dice1.BackColor = System.Drawing.Color.Teal;
+            this.dice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dice1.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.dice1.Location = new System.Drawing.Point(45, 552);
+            this.dice1.Name = "dice1";
+            this.dice1.Size = new System.Drawing.Size(57, 61);
+            this.dice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.dice1.TabIndex = 71;
+            this.dice1.TabStop = false;
             // 
             // label7
             // 
@@ -668,51 +777,6 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // btnHold3
-            // 
-            this.btnHold3.BackColor = System.Drawing.Color.White;
-            this.btnHold3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHold3.Location = new System.Drawing.Point(225, 618);
-            this.btnHold3.Name = "btnHold3";
-            this.btnHold3.Size = new System.Drawing.Size(67, 37);
-            this.btnHold3.TabIndex = 22;
-            this.btnHold3.Text = "HOLD";
-            this.btnHold3.UseVisualStyleBackColor = false;
-            // 
-            // btnHold4
-            // 
-            this.btnHold4.BackColor = System.Drawing.Color.White;
-            this.btnHold4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHold4.Location = new System.Drawing.Point(315, 618);
-            this.btnHold4.Name = "btnHold4";
-            this.btnHold4.Size = new System.Drawing.Size(67, 37);
-            this.btnHold4.TabIndex = 21;
-            this.btnHold4.Text = "HOLD";
-            this.btnHold4.UseVisualStyleBackColor = false;
-            this.btnHold4.Click += new System.EventHandler(this.btnDice4_Click);
-            // 
-            // btnHold5
-            // 
-            this.btnHold5.BackColor = System.Drawing.Color.White;
-            this.btnHold5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHold5.Location = new System.Drawing.Point(405, 618);
-            this.btnHold5.Name = "btnHold5";
-            this.btnHold5.Size = new System.Drawing.Size(67, 37);
-            this.btnHold5.TabIndex = 20;
-            this.btnHold5.Text = "HOLD";
-            this.btnHold5.UseVisualStyleBackColor = false;
-            // 
-            // btnHold2
-            // 
-            this.btnHold2.BackColor = System.Drawing.Color.White;
-            this.btnHold2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHold2.Location = new System.Drawing.Point(135, 618);
-            this.btnHold2.Name = "btnHold2";
-            this.btnHold2.Size = new System.Drawing.Size(67, 37);
-            this.btnHold2.TabIndex = 19;
-            this.btnHold2.Text = "HOLD";
-            this.btnHold2.UseVisualStyleBackColor = false;
-            // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Teal;
@@ -721,66 +785,6 @@
             this.pictureBox15.Size = new System.Drawing.Size(527, 101);
             this.pictureBox15.TabIndex = 62;
             this.pictureBox15.TabStop = false;
-            // 
-            // dice1
-            // 
-            this.dice1.BackColor = System.Drawing.Color.Teal;
-            this.dice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dice1.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.dice1.Location = new System.Drawing.Point(49, 552);
-            this.dice1.Name = "dice1";
-            this.dice1.Size = new System.Drawing.Size(57, 61);
-            this.dice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dice1.TabIndex = 71;
-            this.dice1.TabStop = false;
-            // 
-            // dice5
-            // 
-            this.dice5.BackColor = System.Drawing.Color.Teal;
-            this.dice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dice5.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.dice5.Location = new System.Drawing.Point(410, 552);
-            this.dice5.Name = "dice5";
-            this.dice5.Size = new System.Drawing.Size(57, 61);
-            this.dice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dice5.TabIndex = 72;
-            this.dice5.TabStop = false;
-            // 
-            // dice4
-            // 
-            this.dice4.BackColor = System.Drawing.Color.Teal;
-            this.dice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dice4.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.dice4.Location = new System.Drawing.Point(320, 552);
-            this.dice4.Name = "dice4";
-            this.dice4.Size = new System.Drawing.Size(57, 61);
-            this.dice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dice4.TabIndex = 73;
-            this.dice4.TabStop = false;
-            // 
-            // dice3
-            // 
-            this.dice3.BackColor = System.Drawing.Color.Teal;
-            this.dice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dice3.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.dice3.Location = new System.Drawing.Point(230, 552);
-            this.dice3.Name = "dice3";
-            this.dice3.Size = new System.Drawing.Size(57, 61);
-            this.dice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dice3.TabIndex = 74;
-            this.dice3.TabStop = false;
-            // 
-            // dice2
-            // 
-            this.dice2.BackColor = System.Drawing.Color.Teal;
-            this.dice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dice2.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.dice2.Location = new System.Drawing.Point(140, 552);
-            this.dice2.Name = "dice2";
-            this.dice2.Size = new System.Drawing.Size(57, 61);
-            this.dice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.dice2.TabIndex = 75;
-            this.dice2.TabStop = false;
             // 
             // Form1
             // 
@@ -803,7 +807,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button13);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.scoreTextBox);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox13);
@@ -816,7 +820,7 @@
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.bonusTextBox);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -832,25 +836,30 @@
             this.Controls.Add(this.btnHold4);
             this.Controls.Add(this.btnHold5);
             this.Controls.Add(this.btnHold2);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.threeSum);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.chanceBtn);
+            this.Controls.Add(this.threeKindBtn);
+            this.Controls.Add(this.fourKindBtn);
+            this.Controls.Add(this.fullHouseBtn);
+            this.Controls.Add(this.smallStraightBtn);
+            this.Controls.Add(this.highStraightBtn);
+            this.Controls.Add(this.yahtzeeBtn);
+            this.Controls.Add(this.sixesBtn);
+            this.Controls.Add(this.fivesBtn);
+            this.Controls.Add(this.foursBtn);
+            this.Controls.Add(this.threesBtn);
+            this.Controls.Add(this.twosBtn);
+            this.Controls.Add(this.onesBtn);
             this.Controls.Add(this.pictureBox15);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Yahtzee";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dice2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dice1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -859,11 +868,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dice2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,19 +875,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button threeSum;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button onesBtn;
+        private System.Windows.Forms.Button twosBtn;
+        private System.Windows.Forms.Button threesBtn;
+        private System.Windows.Forms.Button foursBtn;
+        private System.Windows.Forms.Button fivesBtn;
+        private System.Windows.Forms.Button sixesBtn;
+        private System.Windows.Forms.Button threeKindBtn;
+        private System.Windows.Forms.Button fourKindBtn;
+        private System.Windows.Forms.Button fullHouseBtn;
+        private System.Windows.Forms.Button smallStraightBtn;
+        private System.Windows.Forms.Button highStraightBtn;
+        private System.Windows.Forms.Button yahtzeeBtn;
+        private System.Windows.Forms.Button chanceBtn;
         private System.Windows.Forms.Button btnHold2;
         private System.Windows.Forms.Button btnHold5;
         private System.Windows.Forms.Button btnHold4;
@@ -899,7 +903,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox bonusTextBox;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
@@ -912,7 +916,7 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox scoreTextBox;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label1;
