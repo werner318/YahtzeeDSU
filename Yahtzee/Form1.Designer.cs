@@ -41,10 +41,10 @@
             this.highStraightBtn = new System.Windows.Forms.Button();
             this.yahtzeeBtn = new System.Windows.Forms.Button();
             this.chanceBtn = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
+            this.rollTextBox = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.SectionBonusTB = new System.Windows.Forms.TextBox();
             this.bonusTextBox = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.scoreTextBox = new System.Windows.Forms.TextBox();
-            this.button13 = new System.Windows.Forms.Button();
+            this.NewGameBtn = new System.Windows.Forms.Button();
             this.btnHold1 = new System.Windows.Forms.Button();
             this.btnHold3 = new System.Windows.Forms.Button();
             this.btnHold4 = new System.Windows.Forms.Button();
@@ -70,32 +70,33 @@
             this.dice4 = new System.Windows.Forms.PictureBox();
             this.dice5 = new System.Windows.Forms.PictureBox();
             this.dice1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelSumDice = new System.Windows.Forms.Label();
+            this.label5Kind = new System.Windows.Forms.Label();
+            this.label5Row = new System.Windows.Forms.Label();
+            this.label4Row = new System.Windows.Forms.Label();
+            this.label3X2X = new System.Windows.Forms.Label();
+            this.label4X = new System.Windows.Forms.Label();
+            this.label3X = new System.Windows.Forms.Label();
+            this.pictureBoxDice3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDice4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDice5 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDice6 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDice2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDice1 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
@@ -243,16 +244,16 @@
             this.chanceBtn.UseVisualStyleBackColor = false;
             this.chanceBtn.Click += new System.EventHandler(this.chance);
             // 
-            // button20
+            // rollTextBox
             // 
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(45, 659);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(203, 61);
-            this.button20.TabIndex = 24;
-            this.button20.Text = "ROLL";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.btnRull);
+            this.rollTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rollTextBox.Location = new System.Drawing.Point(45, 659);
+            this.rollTextBox.Name = "rollTextBox";
+            this.rollTextBox.Size = new System.Drawing.Size(203, 61);
+            this.rollTextBox.TabIndex = 24;
+            this.rollTextBox.Text = "ROLL";
+            this.rollTextBox.UseVisualStyleBackColor = true;
+            this.rollTextBox.Click += new System.EventHandler(this.btnRoll);
             // 
             // button21
             // 
@@ -278,21 +279,20 @@
             this.textBox1.TabIndex = 26;
             this.textBox1.Text = "One";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // SectionBonusTB
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Snow;
-            this.textBox2.Location = new System.Drawing.Point(12, 489);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 61);
-            this.textBox2.TabIndex = 39;
-            this.textBox2.Text = "Section Bonus +35";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SectionBonusTB.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SectionBonusTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SectionBonusTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SectionBonusTB.ForeColor = System.Drawing.Color.Snow;
+            this.SectionBonusTB.Location = new System.Drawing.Point(12, 489);
+            this.SectionBonusTB.Multiline = true;
+            this.SectionBonusTB.Name = "SectionBonusTB";
+            this.SectionBonusTB.Size = new System.Drawing.Size(71, 61);
+            this.SectionBonusTB.TabIndex = 39;
+            this.SectionBonusTB.Text = "Section Bonus +35";
+            this.SectionBonusTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bonusTextBox
             // 
@@ -300,14 +300,13 @@
             this.bonusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bonusTextBox.ForeColor = System.Drawing.Color.Snow;
-            this.bonusTextBox.Location = new System.Drawing.Point(97, 496);
+            this.bonusTextBox.Location = new System.Drawing.Point(76, 496);
             this.bonusTextBox.Multiline = true;
             this.bonusTextBox.Name = "bonusTextBox";
-            this.bonusTextBox.Size = new System.Drawing.Size(71, 38);
+            this.bonusTextBox.Size = new System.Drawing.Size(53, 38);
             this.bonusTextBox.TabIndex = 47;
-            this.bonusTextBox.Text = "0/63";
-            this.bonusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bonusTextBox.TextChanged += new System.EventHandler(this.sectionBonus);
+            this.bonusTextBox.Text = "0";
+            this.bonusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox4
             // 
@@ -364,7 +363,6 @@
             this.textBox7.TabIndex = 51;
             this.textBox7.Text = "Six";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
@@ -488,17 +486,16 @@
             this.scoreTextBox.TabIndex = 60;
             this.scoreTextBox.Text = "0";
             this.scoreTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.scoreTextBox.TextChanged += new System.EventHandler(this.score);
             // 
-            // button13
+            // NewGameBtn
             // 
-            this.button13.Location = new System.Drawing.Point(445, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(67, 52);
-            this.button13.TabIndex = 61;
-            this.button13.Text = "New Game";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.newGame);
+            this.NewGameBtn.Location = new System.Drawing.Point(445, 2);
+            this.NewGameBtn.Name = "NewGameBtn";
+            this.NewGameBtn.Size = new System.Drawing.Size(67, 52);
+            this.NewGameBtn.TabIndex = 61;
+            this.NewGameBtn.Text = "New Game";
+            this.NewGameBtn.UseVisualStyleBackColor = true;
+            this.NewGameBtn.Click += new System.EventHandler(this.newGame);
             // 
             // btnHold1
             // 
@@ -620,153 +617,150 @@
             this.dice1.TabIndex = 71;
             this.dice1.TabStop = false;
             // 
-            // label7
+            // labelSumDice
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Snow;
-            this.label7.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label7.Location = new System.Drawing.Point(265, 489);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 61);
-            this.label7.TabIndex = 69;
-            this.label7.Text = "Sum of all dice";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelSumDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSumDice.ForeColor = System.Drawing.Color.Snow;
+            this.labelSumDice.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.labelSumDice.Location = new System.Drawing.Point(265, 489);
+            this.labelSumDice.Name = "labelSumDice";
+            this.labelSumDice.Size = new System.Drawing.Size(63, 61);
+            this.labelSumDice.TabIndex = 69;
+            this.labelSumDice.Text = "Sum of all dice";
+            this.labelSumDice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // label5Kind
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label6.Location = new System.Drawing.Point(265, 422);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 61);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "5 of a kind";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5Kind.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5Kind.ForeColor = System.Drawing.Color.Snow;
+            this.label5Kind.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label5Kind.Location = new System.Drawing.Point(265, 422);
+            this.label5Kind.Name = "label5Kind";
+            this.label5Kind.Size = new System.Drawing.Size(63, 61);
+            this.label5Kind.TabIndex = 68;
+            this.label5Kind.Text = "5 of a kind";
+            this.label5Kind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // label5Row
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label5.Location = new System.Drawing.Point(265, 355);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 61);
-            this.label5.TabIndex = 67;
-            this.label5.Text = "5 in a row";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5Row.ForeColor = System.Drawing.Color.Snow;
+            this.label5Row.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label5Row.Location = new System.Drawing.Point(265, 355);
+            this.label5Row.Name = "label5Row";
+            this.label5Row.Size = new System.Drawing.Size(63, 61);
+            this.label5Row.TabIndex = 67;
+            this.label5Row.Text = "5 in a row";
+            this.label5Row.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label4Row
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label4.Location = new System.Drawing.Point(265, 291);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 61);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "4 in a row";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4Row.ForeColor = System.Drawing.Color.Snow;
+            this.label4Row.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label4Row.Location = new System.Drawing.Point(265, 291);
+            this.label4Row.Name = "label4Row";
+            this.label4Row.Size = new System.Drawing.Size(63, 61);
+            this.label4Row.TabIndex = 66;
+            this.label4Row.Text = "4 in a row";
+            this.label4Row.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label3X2X
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label3.Location = new System.Drawing.Point(265, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 61);
-            this.label3.TabIndex = 65;
-            this.label3.Text = "3X 2X";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3X2X.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3X2X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3X2X.ForeColor = System.Drawing.Color.Snow;
+            this.label3X2X.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label3X2X.Location = new System.Drawing.Point(265, 224);
+            this.label3X2X.Name = "label3X2X";
+            this.label3X2X.Size = new System.Drawing.Size(63, 61);
+            this.label3X2X.TabIndex = 65;
+            this.label3X2X.Text = "3X 2X";
+            this.label3X2X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // label4X
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label2.Location = new System.Drawing.Point(265, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 61);
-            this.label2.TabIndex = 64;
-            this.label2.Text = "4X";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4X.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4X.ForeColor = System.Drawing.Color.Snow;
+            this.label4X.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label4X.Location = new System.Drawing.Point(265, 157);
+            this.label4X.Name = "label4X";
+            this.label4X.Size = new System.Drawing.Size(63, 61);
+            this.label4X.TabIndex = 64;
+            this.label4X.Text = "4X";
+            this.label4X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // label3X
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label1.Location = new System.Drawing.Point(265, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 61);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "3X";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label3X.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3X.ForeColor = System.Drawing.Color.Snow;
+            this.label3X.Image = global::Yahtzee.Properties.Resources.dice_7;
+            this.label3X.Location = new System.Drawing.Point(265, 86);
+            this.label3X.Name = "label3X";
+            this.label3X.Size = new System.Drawing.Size(63, 61);
+            this.label3X.TabIndex = 63;
+            this.label3X.Text = "3X";
+            this.label3X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox7
+            // pictureBoxDice3
             // 
-            this.pictureBox7.Image = global::Yahtzee.Properties.Resources.dice_3;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 224);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(61, 57);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 38;
-            this.pictureBox7.TabStop = false;
+            this.pictureBoxDice3.Image = global::Yahtzee.Properties.Resources.dice_3;
+            this.pictureBoxDice3.Location = new System.Drawing.Point(12, 224);
+            this.pictureBoxDice3.Name = "pictureBoxDice3";
+            this.pictureBoxDice3.Size = new System.Drawing.Size(61, 57);
+            this.pictureBoxDice3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice3.TabIndex = 38;
+            this.pictureBoxDice3.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBoxDice4
             // 
-            this.pictureBox6.Image = global::Yahtzee.Properties.Resources.dice_4;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 291);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(61, 61);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 37;
-            this.pictureBox6.TabStop = false;
+            this.pictureBoxDice4.Image = global::Yahtzee.Properties.Resources.dice_4;
+            this.pictureBoxDice4.Location = new System.Drawing.Point(12, 291);
+            this.pictureBoxDice4.Name = "pictureBoxDice4";
+            this.pictureBoxDice4.Size = new System.Drawing.Size(61, 61);
+            this.pictureBoxDice4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice4.TabIndex = 37;
+            this.pictureBoxDice4.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBoxDice5
             // 
-            this.pictureBox5.Image = global::Yahtzee.Properties.Resources.dice_5;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 358);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(61, 61);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 36;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxDice5.Image = global::Yahtzee.Properties.Resources.dice_5;
+            this.pictureBoxDice5.Location = new System.Drawing.Point(12, 358);
+            this.pictureBoxDice5.Name = "pictureBoxDice5";
+            this.pictureBoxDice5.Size = new System.Drawing.Size(61, 61);
+            this.pictureBoxDice5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice5.TabIndex = 36;
+            this.pictureBoxDice5.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBoxDice6
             // 
-            this.pictureBox4.Image = global::Yahtzee.Properties.Resources.dice_6;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 425);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(61, 61);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxDice6.Image = global::Yahtzee.Properties.Resources.dice_6;
+            this.pictureBoxDice6.Location = new System.Drawing.Point(12, 425);
+            this.pictureBoxDice6.Name = "pictureBoxDice6";
+            this.pictureBoxDice6.Size = new System.Drawing.Size(61, 61);
+            this.pictureBoxDice6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice6.TabIndex = 35;
+            this.pictureBoxDice6.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBoxDice2
             // 
-            this.pictureBox3.Image = global::Yahtzee.Properties.Resources.dice_2;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 157);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 59);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxDice2.Image = global::Yahtzee.Properties.Resources.dice_2;
+            this.pictureBoxDice2.Location = new System.Drawing.Point(12, 157);
+            this.pictureBoxDice2.Name = "pictureBoxDice2";
+            this.pictureBoxDice2.Size = new System.Drawing.Size(61, 59);
+            this.pictureBoxDice2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice2.TabIndex = 34;
+            this.pictureBoxDice2.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxDice1
             // 
-            this.pictureBox2.Image = global::Yahtzee.Properties.Resources.dice_1;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 90);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBoxDice1.Image = global::Yahtzee.Properties.Resources.dice_1;
+            this.pictureBoxDice1.Location = new System.Drawing.Point(12, 90);
+            this.pictureBoxDice1.Name = "pictureBoxDice1";
+            this.pictureBoxDice1.Size = new System.Drawing.Size(61, 59);
+            this.pictureBoxDice1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDice1.TabIndex = 33;
+            this.pictureBoxDice1.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -786,6 +780,20 @@
             this.pictureBox15.TabIndex = 62;
             this.pictureBox15.TabStop = false;
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Snow;
+            this.textBox2.Location = new System.Drawing.Point(135, 496);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(61, 38);
+            this.textBox2.TabIndex = 76;
+            this.textBox2.Text = "/63";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -793,20 +801,21 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(518, 725);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dice2);
             this.Controls.Add(this.dice3);
             this.Controls.Add(this.dice4);
             this.Controls.Add(this.dice5);
             this.Controls.Add(this.dice1);
             this.Controls.Add(this.btnHold1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.labelSumDice);
+            this.Controls.Add(this.label5Kind);
+            this.Controls.Add(this.label5Row);
+            this.Controls.Add(this.label4Row);
+            this.Controls.Add(this.label3X2X);
+            this.Controls.Add(this.label4X);
+            this.Controls.Add(this.label3X);
+            this.Controls.Add(this.NewGameBtn);
             this.Controls.Add(this.scoreTextBox);
             this.Controls.Add(this.textBox15);
             this.Controls.Add(this.textBox14);
@@ -821,16 +830,16 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.bonusTextBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.SectionBonusTB);
+            this.Controls.Add(this.pictureBoxDice3);
+            this.Controls.Add(this.pictureBoxDice4);
+            this.Controls.Add(this.pictureBoxDice5);
+            this.Controls.Add(this.pictureBoxDice6);
+            this.Controls.Add(this.pictureBoxDice2);
+            this.Controls.Add(this.pictureBoxDice1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button21);
-            this.Controls.Add(this.button20);
+            this.Controls.Add(this.rollTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnHold3);
             this.Controls.Add(this.btnHold4);
@@ -860,12 +869,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
@@ -875,63 +884,64 @@
 
         #endregion
 
-        private System.Windows.Forms.Button onesBtn;
-        private System.Windows.Forms.Button twosBtn;
-        private System.Windows.Forms.Button threesBtn;
-        private System.Windows.Forms.Button foursBtn;
-        private System.Windows.Forms.Button fivesBtn;
-        private System.Windows.Forms.Button sixesBtn;
-        private System.Windows.Forms.Button threeKindBtn;
-        private System.Windows.Forms.Button fourKindBtn;
-        private System.Windows.Forms.Button fullHouseBtn;
-        private System.Windows.Forms.Button smallStraightBtn;
-        private System.Windows.Forms.Button highStraightBtn;
-        private System.Windows.Forms.Button yahtzeeBtn;
-        private System.Windows.Forms.Button chanceBtn;
-        private System.Windows.Forms.Button btnHold2;
-        private System.Windows.Forms.Button btnHold5;
-        private System.Windows.Forms.Button btnHold4;
-        private System.Windows.Forms.Button btnHold3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox bonusTextBox;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox scoreTextBox;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnHold1;
-        private System.Windows.Forms.PictureBox dice1;
-        private System.Windows.Forms.PictureBox dice5;
-        private System.Windows.Forms.PictureBox dice4;
-        private System.Windows.Forms.PictureBox dice3;
-        private System.Windows.Forms.PictureBox dice2;
+        public System.Windows.Forms.Button onesBtn;
+        public System.Windows.Forms.Button twosBtn;
+        public System.Windows.Forms.Button threesBtn;
+        public System.Windows.Forms.Button foursBtn;
+        public System.Windows.Forms.Button fivesBtn;
+        public System.Windows.Forms.Button sixesBtn;
+        public System.Windows.Forms.Button threeKindBtn;
+        public System.Windows.Forms.Button fourKindBtn;
+        public System.Windows.Forms.Button fullHouseBtn;
+        public System.Windows.Forms.Button smallStraightBtn;
+        public System.Windows.Forms.Button highStraightBtn;
+        public System.Windows.Forms.Button yahtzeeBtn;
+        public System.Windows.Forms.Button chanceBtn;
+        public System.Windows.Forms.Button btnHold2;
+        public System.Windows.Forms.Button btnHold5;
+        public System.Windows.Forms.Button btnHold4;
+        public System.Windows.Forms.Button btnHold3;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button rollTextBox;
+        public System.Windows.Forms.Button button21;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.PictureBox pictureBoxDice1;
+        public System.Windows.Forms.PictureBox pictureBoxDice2;
+        public System.Windows.Forms.PictureBox pictureBoxDice6;
+        public System.Windows.Forms.PictureBox pictureBoxDice5;
+        public System.Windows.Forms.PictureBox pictureBoxDice4;
+        public System.Windows.Forms.PictureBox pictureBoxDice3;
+        public System.Windows.Forms.TextBox SectionBonusTB;
+        public System.Windows.Forms.TextBox bonusTextBox;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBox9;
+        public System.Windows.Forms.TextBox textBox10;
+        public System.Windows.Forms.TextBox textBox11;
+        public System.Windows.Forms.TextBox textBox12;
+        public System.Windows.Forms.TextBox textBox13;
+        public System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox textBox15;
+        public System.Windows.Forms.TextBox scoreTextBox;
+        public System.Windows.Forms.Button NewGameBtn;
+        public System.Windows.Forms.PictureBox pictureBox15;
+        public System.Windows.Forms.Label label3X;
+        public System.Windows.Forms.Label label4X;
+        public System.Windows.Forms.Label label3X2X;
+        public System.Windows.Forms.Label label4Row;
+        public System.Windows.Forms.Label label5Row;
+        public System.Windows.Forms.Label label5Kind;
+        public System.Windows.Forms.Label labelSumDice;
+        public System.Windows.Forms.Button btnHold1;
+        public System.Windows.Forms.PictureBox dice1;
+        public System.Windows.Forms.PictureBox dice5;
+        public System.Windows.Forms.PictureBox dice4;
+        public System.Windows.Forms.PictureBox dice3;
+        public System.Windows.Forms.PictureBox dice2;
+        public System.Windows.Forms.TextBox textBox2;
     }
 }
 

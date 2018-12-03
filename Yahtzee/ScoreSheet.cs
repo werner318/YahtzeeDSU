@@ -1,139 +1,50 @@
-﻿#region Using Statements
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-#endregion
+
 namespace Yahtzee
 {
-    public partial class Form1 : Form
+    class ScoreSheet : Form1
     {
-        #region Declaration
-        public Image[] diceImages;
-        public int[] dice;
-        public int[] diceResults;
-        public bool[] HoldState = new bool[5];
-        public int rollCheck = 0;
-        public bool block = false;
-        public Random rand;
-        public int prevScore = 0;
-        public int checkBonus = 0;
-        int[] holdPressed = { 0, 0, 0, 0, 0 };
-        #endregion
-
-        #region Initialization
-        public Form1()
+        int total = 0;
+        public ScoreSheet(int rollCheck, int category, int[] dice, bool block)
         {
-            InitializeComponent();
+            if(category==1) total = OneToSixAdd(rollCheck,1,dice, block);
+            else if (category == 2) total = OneToSixAdd(rollCheck, 2, dice, block);
+            else if (category == 3) total = OneToSixAdd(rollCheck, 3, dice, block);
+            else if (category == 4) total = OneToSixAdd(rollCheck, 4, dice, block);
+            else if (category == 5) total = OneToSixAdd(rollCheck, 5, dice, block);
+            else if (category == 6) total = OneToSixAdd(rollCheck, 6, dice, block);
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        public ScoreSheet(ScoreSheet s)
         {
-            NewGame();
+            total = s.total;
         }
-        #endregion
-        
-        private void btnRoll(object sender, EventArgs e)
+        //public int _total;
+        public int Total
         {
-            if (rollCheck < 3)
+            get { return total; }
+            set { total = value; }
+        }
+        public int OneToSixAdd(int rollCheck,int num, int[] dice, bool block)
+        {
+            int howMany = 0;
+            if (rollCheck != 0 && block == false)
             {
-                var Roll = new Dice("Roll", diceResults, dice, diceImages, rollCheck, HoldState, block);
-                rollCheck++;
-                rollTextBox.Text = "ROLL  " + rollCheck;
-                dice1.Image = diceImages[dice[0]];
-                dice2.Image = diceImages[dice[1]];
-                dice3.Image = diceImages[dice[2]];
-                dice4.Image = diceImages[dice[3]];
-                dice5.Image = diceImages[dice[4]];
+                for (int i = 0; i < dice.Length; i++)
+                {
+                    if (dice[i] == num)
+                    {
+                        howMany++;
+                    }
+                }
             }
-        }        
-        public int[] _getDiceResults;
-        public int[] GetDiceResults
-        {
-            get { return _getDiceResults; }
-            set { _getDiceResults = value; }
-        }
-        public void FuntionHoldDice(int index, int type)
-        {
-            holdPressed[index]++;
-            if (holdPressed[index] == 1)
-            {
-                if (type == 0) dice1.BorderStyle = BorderStyle.Fixed3D;
-                else if (type == 1) dice2.BorderStyle = BorderStyle.Fixed3D;
-                else if (type == 2) dice3.BorderStyle = BorderStyle.Fixed3D;
-                else if (type == 3) dice4.BorderStyle = BorderStyle.Fixed3D;
-                else if (type == 4) dice5.BorderStyle = BorderStyle.Fixed3D;
-            }
-            else
-            {
-                if (type == 0) dice1.BorderStyle = BorderStyle.FixedSingle;
-                else if (type == 1) dice2.BorderStyle = BorderStyle.FixedSingle;
-                else if (type == 2) dice3.BorderStyle = BorderStyle.FixedSingle;
-                else if (type == 3) dice4.BorderStyle = BorderStyle.FixedSingle;
-                else if (type == 4) dice5.BorderStyle = BorderStyle.FixedSingle;
-                holdPressed[index] = 0;
-            }
-            var Hold = new Dice(type, HoldState);
-        }
-        private void holdDice1(object sender, EventArgs e)
-        {
-            FuntionHoldDice(0,0);
-        }
-
-        private void holdDice2(object sender, EventArgs e)
-        {
-            FuntionHoldDice(1, 1);
-        }
-
-        private void holdDice3(object sender, EventArgs e)
-        {
-            FuntionHoldDice(2, 2);
-        }
-
-        private void holdDice4(object sender, EventArgs e)
-        {
-            FuntionHoldDice(3, 3);
-        }
-
-        private void holdDice5(object sender, EventArgs e)
-        {
-            FuntionHoldDice(4, 4);
-        }
-
-        private void btnPlay(object sender, EventArgs e)
-        {
-            //if (block == false) //make sure when user clicked scoresheet (block==true) than click play to reset
-                //return;
             rollCheck = 0;
-            rollTextBox.Text = "ROLL  " + rollCheck;
-            block = false;
-            for(int i=0; i < dice.Length; i++)
-            {
-                HoldState[i] = false;
-                holdPressed[i] = 0;
-            }          
-            dice1.Image = Properties.Resources.dice_7;
-            dice1.BorderStyle = BorderStyle.FixedSingle;
-            dice2.Image = Properties.Resources.dice_7;
-            dice2.BorderStyle = BorderStyle.FixedSingle;
-            dice3.Image = Properties.Resources.dice_7;
-            dice3.BorderStyle = BorderStyle.FixedSingle;
-            dice4.Image = Properties.Resources.dice_7;
-            dice4.BorderStyle = BorderStyle.FixedSingle;
-            dice5.Image = Properties.Resources.dice_7;
-            dice5.BorderStyle = BorderStyle.FixedSingle;
-
-            scoreTextBox.Text = Convert.ToString(prevScore);
-            bonusTextBox.Text = Convert.ToString(checkBonus);
-            if (checkBonus >= 63)
-                scoreTextBox.Text = Convert.ToString(prevScore + 35);
-        }
-
+            block = true;
+            return howMany * num;
+        }/*
         private int OneToSixAdd(int num)
         {
             int howMany = 0;
@@ -154,54 +65,50 @@ namespace Yahtzee
         
         private void numOnes(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck,1, dice, block);
-            int total1 = Score.Total;
-            onesBtn.Text = Convert.ToString(total1);
+            //var Score = new ScoreSheet(rollCheck,1, dice, block);
+            //var total = new ScoreSheet(Score);
+            int total = OneToSixAdd(1);
+            onesBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(onesBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(onesBtn.Text) + checkBonus;
         }
 
         private void numTwos(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck, 2, dice, block);
-            int total2 = Score.Total;
-            twosBtn.Text = Convert.ToString(total2);
+            int total = OneToSixAdd(2);
+            twosBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(twosBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(twosBtn.Text) + checkBonus;
         }
 
         private void numThrees(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck, 3, dice, block);
-            int total3 = Score.Total;
-            threesBtn.Text = Convert.ToString(total3);
+            int total = OneToSixAdd(3);
+            threesBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(threesBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(threesBtn.Text) + checkBonus;
         }
 
         private void numFours(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck, 4, dice, block);
-            int total4 = Score.Total;
-            foursBtn.Text = Convert.ToString(total4);
+            int total = OneToSixAdd(4);
+            foursBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(foursBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(foursBtn.Text) + checkBonus;
         }
 
         private void numFives(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck, 5, dice, block);
-            int total5 = Score.Total;
-            fivesBtn.Text = Convert.ToString(total5);
+            int total = OneToSixAdd(5);
+            fivesBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(fivesBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(fivesBtn.Text) + checkBonus;
         }
 
         private void numSixes(object sender, EventArgs e)
         {
-            var Score = new ScoreSheet(rollCheck, 6, dice, block);
-            int total6 = Score.Total;
-            sixesBtn.Text = Convert.ToString(total6);
+            int total = OneToSixAdd(6);
+            sixesBtn.Text = Convert.ToString(total);
             prevScore = Convert.ToInt16(sixesBtn.Text) + prevScore;
             checkBonus = Convert.ToInt16(sixesBtn.Text) + checkBonus;
         }
@@ -346,35 +253,6 @@ namespace Yahtzee
             }                          
             rollCheck = 0;
             block = true;
-        }
-        
-        public void NewGame()
-        {
-            diceImages = new Image[7];
-            diceImages[0] = Properties.Resources.dice_7;
-            diceImages[1] = Properties.Resources.dice_1;
-            diceImages[2] = Properties.Resources.dice_2;
-            diceImages[3] = Properties.Resources.dice_3;
-            diceImages[4] = Properties.Resources.dice_4;
-            diceImages[5] = Properties.Resources.dice_5;
-            diceImages[6] = Properties.Resources.dice_6;
-
-            dice = new int[5] { 0, 0, 0, 0, 0 };
-            diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
-            rand = new Random();
-            for (int i = 0; i < dice.Length; i++)
-                HoldState[i] = false;
-            rollCheck = 0;
-            block = false;
-            prevScore = 0;
-            checkBonus = 0;
-    }
-        private void newGame(object sender, EventArgs e)
-        {
-            NewGame();
-            scoreTextBox.Text = bonusTextBox.Text = "0"; onesBtn.Text = twosBtn.Text = threesBtn.Text = foursBtn.Text = fivesBtn.Text 
-                = sixesBtn.Text = threeKindBtn.Text = fourKindBtn.Text = fullHouseBtn.Text = smallStraightBtn.Text
-                = highStraightBtn.Text = yahtzeeBtn.Text = chanceBtn.Text = "";
-        }        
+        }*/
     }
 }
