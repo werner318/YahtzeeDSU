@@ -86,6 +86,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dice4)).BeginInit();
@@ -99,6 +105,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // onesBtn
@@ -272,17 +282,17 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(174, 103);
+            this.textBox1.Location = new System.Drawing.Point(45, 61);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(87, 26);
             this.textBox1.TabIndex = 26;
-            this.textBox1.Text = "One";
+            this.textBox1.Text = "Minor";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SectionBonusTB
             // 
-            this.SectionBonusTB.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SectionBonusTB.BackColor = System.Drawing.Color.CornflowerBlue;
             this.SectionBonusTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SectionBonusTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SectionBonusTB.ForeColor = System.Drawing.Color.Snow;
@@ -296,21 +306,21 @@
             // 
             // bonusTextBox
             // 
-            this.bonusTextBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.bonusTextBox.BackColor = System.Drawing.Color.SteelBlue;
             this.bonusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bonusTextBox.ForeColor = System.Drawing.Color.Snow;
-            this.bonusTextBox.Location = new System.Drawing.Point(76, 496);
+            this.bonusTextBox.Location = new System.Drawing.Point(84, 496);
             this.bonusTextBox.Multiline = true;
             this.bonusTextBox.Name = "bonusTextBox";
-            this.bonusTextBox.Size = new System.Drawing.Size(53, 38);
+            this.bonusTextBox.Size = new System.Drawing.Size(51, 38);
             this.bonusTextBox.TabIndex = 47;
             this.bonusTextBox.Text = "0";
             this.bonusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox4.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.White;
@@ -338,7 +348,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox6.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.White;
@@ -366,7 +376,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox8.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.White;
@@ -394,7 +404,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox10.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.ForeColor = System.Drawing.Color.White;
@@ -422,7 +432,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox12.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.ForeColor = System.Drawing.Color.White;
@@ -450,7 +460,7 @@
             // 
             // textBox14
             // 
-            this.textBox14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox14.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.ForeColor = System.Drawing.Color.White;
@@ -559,7 +569,7 @@
             // 
             // dice2
             // 
-            this.dice2.BackColor = System.Drawing.Color.Teal;
+            this.dice2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.dice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dice2.Image = global::Yahtzee.Properties.Resources.dice_7;
             this.dice2.Location = new System.Drawing.Point(140, 552);
@@ -571,7 +581,7 @@
             // 
             // dice3
             // 
-            this.dice3.BackColor = System.Drawing.Color.Teal;
+            this.dice3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.dice3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dice3.Image = global::Yahtzee.Properties.Resources.dice_7;
             this.dice3.Location = new System.Drawing.Point(230, 552);
@@ -583,7 +593,7 @@
             // 
             // dice4
             // 
-            this.dice4.BackColor = System.Drawing.Color.Teal;
+            this.dice4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.dice4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dice4.Image = global::Yahtzee.Properties.Resources.dice_7;
             this.dice4.Location = new System.Drawing.Point(320, 552);
@@ -595,7 +605,7 @@
             // 
             // dice5
             // 
-            this.dice5.BackColor = System.Drawing.Color.Teal;
+            this.dice5.BackColor = System.Drawing.SystemColors.HotTrack;
             this.dice5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dice5.Image = global::Yahtzee.Properties.Resources.dice_7;
             this.dice5.Location = new System.Drawing.Point(410, 552);
@@ -607,7 +617,7 @@
             // 
             // dice1
             // 
-            this.dice1.BackColor = System.Drawing.Color.Teal;
+            this.dice1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.dice1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dice1.Image = global::Yahtzee.Properties.Resources.dice_7;
             this.dice1.Location = new System.Drawing.Point(45, 552);
@@ -619,6 +629,7 @@
             // 
             // labelSumDice
             // 
+            this.labelSumDice.BackColor = System.Drawing.Color.SteelBlue;
             this.labelSumDice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSumDice.ForeColor = System.Drawing.Color.Snow;
             this.labelSumDice.Image = global::Yahtzee.Properties.Resources.dice_7;
@@ -643,6 +654,7 @@
             // 
             // label5Row
             // 
+            this.label5Row.BackColor = System.Drawing.Color.SteelBlue;
             this.label5Row.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5Row.ForeColor = System.Drawing.Color.Snow;
             this.label5Row.Image = global::Yahtzee.Properties.Resources.dice_7;
@@ -667,7 +679,7 @@
             // 
             // label3X2X
             // 
-            this.label3X2X.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3X2X.BackColor = System.Drawing.Color.SteelBlue;
             this.label3X2X.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3X2X.ForeColor = System.Drawing.Color.Snow;
             this.label3X2X.Image = global::Yahtzee.Properties.Resources.dice_7;
@@ -692,6 +704,7 @@
             // 
             // label3X
             // 
+            this.label3X.BackColor = System.Drawing.Color.SteelBlue;
             this.label3X.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3X.ForeColor = System.Drawing.Color.Snow;
             this.label3X.Image = global::Yahtzee.Properties.Resources.dice_7;
@@ -754,6 +767,7 @@
             // 
             // pictureBoxDice1
             // 
+            this.pictureBoxDice1.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBoxDice1.Image = global::Yahtzee.Properties.Resources.dice_1;
             this.pictureBoxDice1.Location = new System.Drawing.Point(12, 90);
             this.pictureBoxDice1.Name = "pictureBoxDice1";
@@ -764,16 +778,16 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Teal;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(527, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(527, 61);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox15
             // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Teal;
+            this.pictureBox15.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pictureBox15.Location = new System.Drawing.Point(-1, 552);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(527, 101);
@@ -782,17 +796,81 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Snow;
-            this.textBox2.Location = new System.Drawing.Point(135, 496);
+            this.textBox2.Location = new System.Drawing.Point(141, 496);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(61, 38);
             this.textBox2.TabIndex = 76;
             this.textBox2.Text = "/63";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.SteelBlue;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(172, 102);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(87, 26);
+            this.textBox3.TabIndex = 77;
+            this.textBox3.Text = "One";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox16.ForeColor = System.Drawing.Color.White;
+            this.textBox16.Location = new System.Drawing.Point(369, 61);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(87, 25);
+            this.textBox16.TabIndex = 78;
+            this.textBox16.Text = "Major";
+            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 86);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(527, 68);
+            this.pictureBox2.TabIndex = 79;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 486);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(527, 71);
+            this.pictureBox3.TabIndex = 80;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox4.Location = new System.Drawing.Point(-1, 219);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(527, 69);
+            this.pictureBox4.TabIndex = 81;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox5.Location = new System.Drawing.Point(-1, 350);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(527, 68);
+            this.pictureBox5.TabIndex = 82;
+            this.pictureBox5.TabStop = false;
             // 
             // Form1
             // 
@@ -801,6 +879,8 @@
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(518, 725);
+            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dice2);
             this.Controls.Add(this.dice3);
@@ -859,6 +939,10 @@
             this.Controls.Add(this.twosBtn);
             this.Controls.Add(this.onesBtn);
             this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox5);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
@@ -877,6 +961,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDice1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -942,6 +1030,12 @@
         public System.Windows.Forms.PictureBox dice3;
         public System.Windows.Forms.PictureBox dice2;
         public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox16;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

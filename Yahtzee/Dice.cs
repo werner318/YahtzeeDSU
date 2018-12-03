@@ -12,22 +12,18 @@ namespace Yahtzee
 {
     public class Dice : Form1
     {
-        public Dice()
-        {
-
-        }
-        public Dice(string type, int[] diceResults, int[] dice, Image[] diceImages, int rollCheck, bool[] HoldState, bool block)
+        public Dice(string type, int[] diceResults, int[] dice, Image[] diceImages, int rollCheck, bool[] HoldState, bool blockUser)
         {
             if (rollCheck < 3)
             {
-                if (block == false)
+                if (blockUser == false)
                 {
                     RollDice(diceResults, dice, diceImages, HoldState);
                     rollCheck++;
                 }
                 else
                 {
-                    block = true;
+                    blockUser = true;
                 }
             }
         }
