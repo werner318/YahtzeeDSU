@@ -14,6 +14,7 @@ namespace Yahtzee
     public partial class Form1 : Form
     {
         //fields
+        #region fields declaration
         public Image[] diceImages;
         public int[] dice;
         public int[] diceResults;
@@ -25,7 +26,7 @@ namespace Yahtzee
         public int checkBonus = 0;
         bool onlyOnceBonus = false;
         int[] holdPressed = { 0, 0, 0, 0, 0 };
-
+        #endregion
         public Form1()
         {
             InitializeComponent();
@@ -100,17 +101,12 @@ namespace Yahtzee
             {
                 HoldState[i] = false;
                 holdPressed[i] = 0;
-            }          
-            dice1.Image = Properties.Resources.dice_7;
-            dice1.BorderStyle = BorderStyle.FixedSingle;
-            dice2.Image = Properties.Resources.dice_7;
-            dice2.BorderStyle = BorderStyle.FixedSingle;
-            dice3.Image = Properties.Resources.dice_7;
-            dice3.BorderStyle = BorderStyle.FixedSingle;
-            dice4.Image = Properties.Resources.dice_7;
-            dice4.BorderStyle = BorderStyle.FixedSingle;
-            dice5.Image = Properties.Resources.dice_7;
-            dice5.BorderStyle = BorderStyle.FixedSingle;
+            }
+            SetBlankImages(dice1); 
+            SetBlankImages(dice2);
+            SetBlankImages(dice3);
+            SetBlankImages(dice4);
+            SetBlankImages(dice5);
 
             scoreTextBox.Text = Convert.ToString(prevScore);
             bonusTextBox.Text = Convert.ToString(checkBonus);
@@ -119,7 +115,13 @@ namespace Yahtzee
                 scoreTextBox.Text = Convert.ToString(prevScore + 35);
                 onlyOnceBonus = true;
             }
-        }  
+        } 
+        //function to setBlankImages
+        public void SetBlankImages(PictureBox dice)
+        {
+            dice.Image = Properties.Resources.dice_7;
+            dice.BorderStyle = BorderStyle.FixedSingle;
+        }
         //numOnes button
         private void numOnes(object sender, EventArgs e)
         {
@@ -246,6 +248,12 @@ namespace Yahtzee
             scoreTextBox.Text = bonusTextBox.Text = "0"; onesBtn.Text = twosBtn.Text = threesBtn.Text = foursBtn.Text = fivesBtn.Text 
                 = sixesBtn.Text = threeKindBtn.Text = fourKindBtn.Text = fullHouseBtn.Text = smallStraightBtn.Text
                 = highStraightBtn.Text = yahtzeeBtn.Text = chanceBtn.Text = "";
+            SetBlankImages(dice1); //if newgame button is clicked, switch hold background
+            SetBlankImages(dice2);
+            SetBlankImages(dice3);
+            SetBlankImages(dice4);
+            SetBlankImages(dice5);
+
         }        
     }
 }

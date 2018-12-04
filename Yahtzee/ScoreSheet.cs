@@ -9,20 +9,19 @@ namespace Yahtzee
 {
     class ScoreSheet : Form1
     {
-        int total = 0;
+        int _total = 0;
         public ScoreSheet(int rollCheck, int num, int[] dice, bool block)
         {
-            total = OneToSixAdd(rollCheck, num, dice, block);
+            _total = OneToSixAdd(rollCheck, num, dice, block);
         }
         public ScoreSheet(ScoreSheet s)
         {
-            total = s.total;
+            _total = s.Total;
         }
-        //public int _total;
         public int Total
         {
-            get { return total; }
-            set { total = value; }
+            get { return _total; }
+            set { _total = value; }
         }
         public int OneToSixAdd(int rollCheck, int num, int[] dice, bool block)
         {
@@ -49,11 +48,11 @@ namespace Yahtzee
                 {
                     if (diceResults[i] == 3 || diceResults[i] == 4 || diceResults[i] == 5)
                     {
-                        total = addDice(diceResults);
+                        _total = addDice(diceResults);
                         break;
                     }
                     else
-                        total = 0;
+                        _total = 0;
                 }
             }
             else if (type == "fourOfKind")
@@ -62,18 +61,18 @@ namespace Yahtzee
                 {
                     if (diceResults[i] == 4 || diceResults[i] == 5)
                     {
-                        total = addDice(diceResults);
+                        _total = addDice(diceResults);
                         break;
                     }
                     else
-                        total = 0;
+                        _total = 0;
                 }
             }
             else if (type == "fullHouse")
             {
                 for (int i = 0; i < dice.Length; i++)
                 {
-                    if (total == 25)
+                    if (_total == 25)
                         break;
                     if (diceResults[i] == 3 || diceResults[i] == 2)
                     {
@@ -81,37 +80,37 @@ namespace Yahtzee
                         {
                             if ((diceResults[i] == 3 && diceResults[j] == 2) || (diceResults[i] == 2 && diceResults[j] == 3))
                             {
-                                total = 25;
+                                _total = 25;
                                 break;
                             }
 
                         }
                     }
                     else
-                        total = 0;
+                        _total = 0;
                 }
             }
             else if (type == "smallStraight")
             {
 
                 if (diceResults[0] >= 1 && diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1)
-                    total = 30;
+                    _total = 30;
                 else if (diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1)
-                    total = 30;
+                    _total = 30;
                 else if (diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1 && diceResults[5] >= 1)
-                    total = 30;
+                    _total = 30;
                 else
-                    total = 0;
+                    _total = 0;
                 
             }
             else if (type == "highStraight")
             {
                 if (diceResults[0] >= 1 && diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1)
-                    total = 40;
+                    _total = 40;
                 else if (diceResults[1] >= 1 && diceResults[2] >= 1 && diceResults[3] >= 1 && diceResults[4] >= 1 && diceResults[5] >= 1)
-                    total = 40;
+                    _total = 40;
                 else
-                    total = 0;
+                    _total = 0;
             }
             else if (type == "yahtzee")
             {
@@ -119,16 +118,16 @@ namespace Yahtzee
                 {
                     if (diceResults[i] == 5)
                     {
-                        total = 50;
+                        _total = 50;
                         break;
                     }
                     else
-                        total = 0;
+                        _total = 0;
                 }
             }
             else if (type == "chance")
             {
-                total = addDice(diceResults);
+                _total = addDice(diceResults);
             }
         }
         public int addDice(int[] numbers)
