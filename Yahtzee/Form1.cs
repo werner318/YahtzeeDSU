@@ -15,17 +15,20 @@ namespace Yahtzee
     {
         //fields
         #region fields declaration
-        public Image[] diceImages;
-        public int[] dice;
-        public int[] diceResults;
+            
+        public Image[] diceImages = new Image[7];
+        public int[] dice = new int[5] { 0, 0, 0, 0, 0 };
+        public int[] diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
         public bool[] HoldState = new bool[5];
         public int rollCheck = 0;
         public bool blockUser = false;
-        public Random rand;
+        public Random rand = new Random();
         public int prevScore = 0;
-        public int checkBonus = 0;
+        public int bonusScore = 0;
         bool onlyOnceBonus = false;
         int[] holdPressed = { 0, 0, 0, 0, 0 };
+        
+        bool isMenuPanelOpen = false;
         #endregion
         public Form1()
         {
@@ -34,6 +37,13 @@ namespace Yahtzee
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            diceImages[0] = Properties.Resources.dice_7;
+            diceImages[1] = Properties.Resources.dice_1;
+            diceImages[2] = Properties.Resources.dice_2;
+            diceImages[3] = Properties.Resources.dice_3;
+            diceImages[4] = Properties.Resources.dice_4;
+            diceImages[5] = Properties.Resources.dice_5;
+            diceImages[6] = Properties.Resources.dice_6;
             NewGame();
         }
 
@@ -94,6 +104,8 @@ namespace Yahtzee
         //play button
         private void btnPlay(object sender, EventArgs e)
         {
+            if (!blockUser) //block user should be set to true, if its false user hasnt clicked scoresheet
+                return;
             rollCheck = 0;
             rollTextBox.Text = "ROLL  " + rollCheck;
             blockUser = false;
@@ -109,8 +121,8 @@ namespace Yahtzee
             SetBlankImages(dice5);
 
             scoreTextBox.Text = Convert.ToString(prevScore);
-            bonusTextBox.Text = Convert.ToString(checkBonus);
-            if (checkBonus >= 63 && onlyOnceBonus == false)
+            bonusTextBox.Text = Convert.ToString(bonusScore);
+            if (bonusScore >= 63 && onlyOnceBonus == false)
             {
                 scoreTextBox.Text = Convert.ToString(prevScore + 35);
                 onlyOnceBonus = true;
@@ -194,9 +206,16 @@ namespace Yahtzee
             {
                 var Score = new ScoreSheet(rollCheck, num, dice, blockUser);
                 int total = Score.Total;
-                button.Text = Convert.ToString(total);
+                int yahtzeeCounter = Score.YahtzeeCounter;
+                if (yahtzeeBtn.Text=="50") //if you get another yahtzee, you get 50+ your total
+                {
+                    if(yahtzeeCounter>=1)
+                        button.Text = Convert.ToString(total + 50);
+                }
+                else
+                    button.Text = Convert.ToString(total);
                 prevScore = Convert.ToInt16(button.Text) + prevScore;
-                checkBonus = Convert.ToInt16(button.Text) + checkBonus;
+                bonusScore = Convert.ToInt16(button.Text) + bonusScore;
                 ResetFlags();
             }
         }
@@ -221,25 +240,18 @@ namespace Yahtzee
         //function to load the game, set fields to 0/false, set diceImages to blank and diceResults to 0
         public void NewGame()
         {
-            diceImages = new Image[7];
-            diceImages[0] = Properties.Resources.dice_7;
-            diceImages[1] = Properties.Resources.dice_1;
-            diceImages[2] = Properties.Resources.dice_2;
-            diceImages[3] = Properties.Resources.dice_3;
-            diceImages[4] = Properties.Resources.dice_4;
-            diceImages[5] = Properties.Resources.dice_5;
-            diceImages[6] = Properties.Resources.dice_6;
-
-            dice = new int[5] { 0, 0, 0, 0, 0 };
-            diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
+            var newGame = new YahtzeeLogisticsMenu("newGame");
+            newGame.setVariables(dice, diceResults, HoldState, rollCheck, blockUser, prevScore,
+               bonusScore, onlyOnceBonus);
             rand = new Random();
-            for (int i = 0; i < dice.Length; i++)
-                HoldState[i] = false;
-            rollCheck = 0;
-            blockUser = false;
-            prevScore = 0;
-            checkBonus = 0;
-            onlyOnceBonus = false;
+            rollCheck = newGame.RollCheck;
+            dice = newGame.Dice;
+            diceResults = newGame.DiceResults;
+            HoldState = newGame.HoldState;
+            blockUser = newGame.BlockUser;
+            prevScore = newGame.PrevScore;
+            bonusScore = newGame.BonusScore;
+            onlyOnceBonus = newGame.OnlyOnceBonus;
         }
         //funtion to set each textbox.text to 0 if user clicked the new game button.
         private void newGame(object sender, EventArgs e)
@@ -248,12 +260,28 @@ namespace Yahtzee
             scoreTextBox.Text = bonusTextBox.Text = "0"; onesBtn.Text = twosBtn.Text = threesBtn.Text = foursBtn.Text = fivesBtn.Text 
                 = sixesBtn.Text = threeKindBtn.Text = fourKindBtn.Text = fullHouseBtn.Text = smallStraightBtn.Text
                 = highStraightBtn.Text = yahtzeeBtn.Text = chanceBtn.Text = "";
-            SetBlankImages(dice1); //if newgame button is clicked, switch hold background
+            SetBlankImages(dice1); //if newgame button is clicked, set blank images/reset hold background
             SetBlankImages(dice2);
             SetBlankImages(dice3);
             SetBlankImages(dice4);
             SetBlankImages(dice5);
 
-        }        
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var list = new YahtzeeLogisticsMenu(isMenuPanelOpen, panelDropDownList, timer1);
+            isMenuPanelOpen = list.IsMenuPanelOpen;
+        }
+
+        private void LogisticsList_Click(object sender, EventArgs e)
+        {           
+            timer1.Start();            
+        }
+
+        private void RulesBtn_Click(object sender, EventArgs e)
+        {
+            var Rules = new YahtzeeLogisticsMenu("Rules");
+        }
     }
 }

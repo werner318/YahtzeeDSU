@@ -10,6 +10,7 @@ namespace Yahtzee
     class ScoreSheet : Form1
     {
         int _total = 0;
+        int _yahtzeeCounter = 0; //for bonus
         public ScoreSheet(int rollCheck, int num, int[] dice, bool block)
         {
             _total = OneToSixAdd(rollCheck, num, dice, block);
@@ -36,6 +37,8 @@ namespace Yahtzee
                     }
                 }
             }
+            if (howMany == 5)
+                _yahtzeeCounter++;
             rollCheck = 0;
             block = true;
             return howMany * num;
@@ -135,6 +138,11 @@ namespace Yahtzee
             int score = (1 * numbers[0]) + (2 * numbers[1]) + (3 * numbers[2]) +
                             (4 * numbers[3]) + (5 * numbers[4]) + (6 * numbers[5]);
             return score;
+        }
+        public int YahtzeeCounter
+        {
+            get { return _yahtzeeCounter; }
+            set { _yahtzeeCounter = value; }
         }
     }
 }
