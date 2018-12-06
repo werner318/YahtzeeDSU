@@ -273,7 +273,7 @@ namespace Yahtzee
             var list = new YahtzeeLogisticsMenu(isMenuPanelOpen, panelDropDownList, timer1);
             isMenuPanelOpen = list.IsMenuPanelOpen;
         }
-
+        
         private void LogisticsList_Click(object sender, EventArgs e)
         {           
             timer1.Start();            

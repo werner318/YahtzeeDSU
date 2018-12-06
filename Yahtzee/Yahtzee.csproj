@@ -57,14 +57,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RulesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RulesPage.Designer.cs">
+      <DependentUpon>RulesPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScoreSheet.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowRules.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowRules.Designer.cs">
-      <DependentUpon>ShowRules.cs</DependentUpon>
     </Compile>
     <Compile Include="YahtzeeLogisticsMenu.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -75,8 +75,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowRules.resx">
-      <DependentUpon>ShowRules.cs</DependentUpon>
+    <EmbeddedResource Include="RulesPage.resx">
+      <DependentUpon>RulesPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

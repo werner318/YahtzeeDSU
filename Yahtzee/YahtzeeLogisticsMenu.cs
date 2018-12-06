@@ -29,9 +29,10 @@ namespace Yahtzee
         {
             if(type=="Rules")
             {
-                ShowRules dialogBox = new ShowRules();
+                RulesPage dialogBox = new RulesPage();
                 dialogBox.Show();
-             
+
+
             }
         }
         public YahtzeeLogisticsMenu(bool isMenuPanelOpen, Panel panelDropDownList, Timer timer1)
