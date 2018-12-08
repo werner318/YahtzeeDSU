@@ -14,7 +14,6 @@ namespace Yahtzee
 {
     class YahtzeeLogisticsMenu
     {
-        Image[] _diceImages = new Image[7];
         int[] _dice;
         int[] _diceResults;
         int _rollCheck = 0;
@@ -31,10 +30,9 @@ namespace Yahtzee
             {
                 RulesPage dialogBox = new RulesPage();
                 dialogBox.Show();
-
-
             }
         }
+        //dropdown menu
         public YahtzeeLogisticsMenu(bool isMenuPanelOpen, Panel panelDropDownList, Timer timer1)
         {
             if (isMenuPanelOpen)
@@ -50,10 +48,10 @@ namespace Yahtzee
                 _isMenuPanelOpen = isMenuPanelOpen = true;              
             }
         }
+        //newgame set fresh values
         public void setVariables(int[] dice, int[] diceResults, bool[] HoldState, int rollCheck, bool blockUser, int prevScore,
                 int bonusScore, bool onlyOnceBonus)
         {
-
             _dice = dice;
             _diceResults = diceResults;
             _rollCheck = rollCheck;
@@ -64,6 +62,14 @@ namespace Yahtzee
             for (int i = 0; i < dice.Length; i++)
                 _holdState[i] = HoldState[i];
         }
+        //display or open upon up the leaderboards
+        public YahtzeeLogisticsMenu(int gamesPlayed, int bestScore, int bestMinor, int bestMajor, double averageScore, int recordOfYahtzee)
+        {
+            LeaderboardsPage dialogBox = new LeaderboardsPage(gamesPlayed, bestScore, bestMinor, bestMajor, averageScore, recordOfYahtzee);
+            dialogBox.Show();
+        }
+        //properties
+        #region Properties
         public int RollCheck
         {
             get { return _rollCheck;  }
@@ -109,5 +115,6 @@ namespace Yahtzee
             get { return _isMenuPanelOpen; }
             set { _isMenuPanelOpen = value; }
         }
+        #endregion
     }
 }

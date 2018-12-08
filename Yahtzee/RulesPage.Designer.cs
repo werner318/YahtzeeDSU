@@ -104,7 +104,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Yahtzee.Properties.Resources.dice_5;
-            this.pictureBox2.Location = new System.Drawing.Point(449, 98);
+            this.pictureBox2.Location = new System.Drawing.Point(449, 102);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(61, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,19 +173,19 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(32, 25);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Location = new System.Drawing.Point(32, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 56);
+            this.label1.Size = new System.Drawing.Size(467, 55);
             this.label1.TabIndex = 64;
-            this.label1.Text = "Score as many points as possible by rolling dice to reach the 13 combinations pre" +
-    "defined in the game.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Score as many points as possible by rolling dice to reach each combination.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(37, 89);
+            this.label2.Location = new System.Drawing.Point(37, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(406, 85);
             this.label2.TabIndex = 65;
@@ -197,27 +197,27 @@
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(37, 195);
+            this.label3.Location = new System.Drawing.Point(37, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(462, 130);
+            this.label3.Size = new System.Drawing.Size(462, 139);
             this.label3.TabIndex = 66;
             this.label3.Text = "A game consists of rounds during which the player chooses which scoring combinati" +
     "on is to be used in that round. Once a combination has been used in the game, it" +
     " cannot be used again.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(37, 325);
+            this.label4.Location = new System.Drawing.Point(37, 333);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(473, 133);
             this.label4.TabIndex = 67;
             this.label4.Text = "You can select dice after your first or second rolls, and you must score after yo" +
     "ur third roll. By clicking on a hold button it saves the current state of the ac" +
     "cording dice above.";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // page2
             // 
@@ -265,7 +265,7 @@
             this.label25.ForeColor = System.Drawing.Color.Snow;
             this.label25.Location = new System.Drawing.Point(66, 479);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(388, 51);
+            this.label25.Size = new System.Drawing.Size(404, 51);
             this.label25.TabIndex = 77;
             this.label25.Text = "Chance. Scores the sum of all dice.";
             // 
@@ -277,7 +277,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(388, 61);
             this.label24.TabIndex = 76;
-            this.label24.Text = "Yahtzy. 5 dice with the same side. Worth 50 points.";
+            this.label24.Text = "Yahtzee. 5 dice with the same side. Worth 50 points.";
             // 
             // label23
             // 
@@ -504,9 +504,9 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(476, 149);
             this.label13.TabIndex = 3;
-            this.label13.Text = "You have a Yatzy when you get 5 dice with the same side and it is worth 50 points" +
-    ". If you get another yatzy after that, it still gives you a bonus of 50 points w" +
-    "hatever the combination you choose.";
+            this.label13.Text = "You have a Yahtzee when you get 5 dice with the same side and it is worth 50 poin" +
+    "ts. If you get another yatzy after that, it still gives you a bonus of 50 points" +
+    " whatever the combination you choose.";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
@@ -525,9 +525,9 @@
             // 
             this.label11.BackColor = System.Drawing.Color.LightBlue;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(439, 39);
+            this.label11.Location = new System.Drawing.Point(462, 39);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 44);
+            this.label11.Size = new System.Drawing.Size(44, 44);
             this.label11.TabIndex = 1;
             this.label11.Text = "12";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -538,9 +538,9 @@
             this.label10.ForeColor = System.Drawing.Color.Snow;
             this.label10.Location = new System.Drawing.Point(3, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(437, 83);
+            this.label10.Size = new System.Drawing.Size(437, 105);
             this.label10.TabIndex = 0;
-            this.label10.Text = "When you want to record a combination in teh scoreboard, click on teh cell next t" +
+            this.label10.Text = "When you want to record a combination in the scoresheet, click on the cell next t" +
     "o the combination and then press the play button.";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

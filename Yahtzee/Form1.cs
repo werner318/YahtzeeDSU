@@ -14,8 +14,7 @@ namespace Yahtzee
     public partial class Form1 : Form
     {
         //fields
-        #region fields declaration
-            
+        #region fields declaration           
         public Image[] diceImages = new Image[7];
         public int[] dice = new int[5] { 0, 0, 0, 0, 0 };
         public int[] diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
@@ -26,15 +25,20 @@ namespace Yahtzee
         public int prevScore = 0;
         public int bonusScore = 0;
         bool onlyOnceBonus = false;
+        int gamesPlayed, bestScore, bestMinor, bestMajor, recordOfYahtzee = 0;
+        double averageScore = 0;
+        bool leaderBoardsCanbeOpen = false;
         int[] holdPressed = { 0, 0, 0, 0, 0 };
-        
+        private int[] tmpBestScore = { 0, 0, 0, 0, 0 };
+        private int[] tmpBestMinor = { 0, 0, 0, 0, 0 };
+        private int[] tmpBestMajor = { 0, 0, 0, 0, 0 };
+        int biggestScore = 0, biggestMinor = 0, biggestMajor = 0;
         bool isMenuPanelOpen = false;
         #endregion
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             diceImages[0] = Properties.Resources.dice_7;
@@ -46,7 +50,6 @@ namespace Yahtzee
             diceImages[6] = Properties.Resources.dice_6;
             NewGame();
         }
-
         //roll button that goes into the dice class to do the meathod of rolling the 5 dice. than afterwards displays image at each index
         private void btnRoll(object sender, EventArgs e)
         {
@@ -65,27 +68,32 @@ namespace Yahtzee
         //holdDice1 button
         private void holdDice1(object sender, EventArgs e)
         {
-            FuntionHoldDice(0,dice1);
+            if(rollCheck>=1) //prevent user to hold the blank images
+                FuntionHoldDice(0,dice1);
         }
         //holdDice2 button
         private void holdDice2(object sender, EventArgs e)
         {
-            FuntionHoldDice(1, dice2);
+            if (rollCheck >= 1)
+                FuntionHoldDice(1, dice2);
         }
         //holdDice3 button
         private void holdDice3(object sender, EventArgs e)
         {
-            FuntionHoldDice(2, dice3);
+            if (rollCheck >= 1)
+                FuntionHoldDice(2, dice3);
         }
         //holdDice4 button
         private void holdDice4(object sender, EventArgs e)
         {
-            FuntionHoldDice(3, dice4);
+            if (rollCheck >= 1)
+                FuntionHoldDice(3, dice4);
         }
         //holdDice5 button
         private void holdDice5(object sender, EventArgs e)
         {
-            FuntionHoldDice(4, dice5);
+            if (rollCheck >= 1)
+                FuntionHoldDice(4, dice5);
         }
         //function to go into Dice class to do the Hold Method
         public void FuntionHoldDice(int index, PictureBox dice)
@@ -210,7 +218,12 @@ namespace Yahtzee
                 if (yahtzeeBtn.Text=="50") //if you get another yahtzee, you get 50+ your total
                 {
                     if(yahtzeeCounter>=1)
+                    {
+                        recordOfYahtzee++; 
                         button.Text = Convert.ToString(total + 50);
+                    }
+                    else
+                        button.Text = Convert.ToString(total);
                 }
                 else
                     button.Text = Convert.ToString(total);
@@ -256,32 +269,79 @@ namespace Yahtzee
         //funtion to set each textbox.text to 0 if user clicked the new game button.
         private void newGame(object sender, EventArgs e)
         {
+            gamesPlayed++; bestScore = Convert.ToInt32(scoreTextBox.Text); bestMinor = Convert.ToInt32(bonusTextBox.Text);
+            if (bestMinor >= 63)
+                bestMajor = bestScore - bestMinor - 35;
+            else
+                bestMajor = bestScore - bestMinor;
+            leaderBoardsCanbeOpen = true;
+            if (yahtzeeBtn.Text == "50") recordOfYahtzee++;
             NewGame();
             scoreTextBox.Text = bonusTextBox.Text = "0"; onesBtn.Text = twosBtn.Text = threesBtn.Text = foursBtn.Text = fivesBtn.Text 
                 = sixesBtn.Text = threeKindBtn.Text = fourKindBtn.Text = fullHouseBtn.Text = smallStraightBtn.Text
-                = highStraightBtn.Text = yahtzeeBtn.Text = chanceBtn.Text = "";
+                = highStraightBtn.Text = yahtzeeBtn.Text = chanceBtn.Text = ""; bonusScore = prevScore = rollCheck = 0;
+            rollTextBox.Text = "ROLL  " + rollCheck;
             SetBlankImages(dice1); //if newgame button is clicked, set blank images/reset hold background
             SetBlankImages(dice2);
             SetBlankImages(dice3);
             SetBlankImages(dice4);
             SetBlankImages(dice5);
-
         }
-
+        //for dropdown list
         private void timer1_Tick(object sender, EventArgs e)
         {
             var list = new YahtzeeLogisticsMenu(isMenuPanelOpen, panelDropDownList, timer1);
             isMenuPanelOpen = list.IsMenuPanelOpen;
         }
-        
+        //for dropdown list
         private void LogisticsList_Click(object sender, EventArgs e)
         {           
             timer1.Start();            
         }
-
+        //rulesbutton class that displays description
         private void RulesBtn_Click(object sender, EventArgs e)
         {
             var Rules = new YahtzeeLogisticsMenu("Rules");
+        }
+        //leaderboards class that dsiplays the info
+        private void LeaderboardsBtn_Click(object sender, EventArgs e)
+        {
+            if(leaderBoardsCanbeOpen)
+            {
+                biggestScore = bestScore = bestTypeFunction(bestScore, tmpBestScore, biggestScore);
+                if (biggestScore == -1)
+                    return;
+                biggestMinor = bestMinor = bestTypeFunction(bestMinor, tmpBestMinor, biggestMinor);
+                biggestMajor = bestMajor = bestTypeFunction(bestMajor, tmpBestMajor, biggestMajor);
+                for (int i=0; i<gamesPlayed; i++)
+                {
+                    averageScore = tmpBestScore[i] + averageScore;
+                }
+                averageScore = averageScore / gamesPlayed;
+                var Leaderboards = new YahtzeeLogisticsMenu(gamesPlayed, bestScore, bestMinor, bestMajor, averageScore, recordOfYahtzee);
+                averageScore = 0;
+            }                
+        }
+        private int bestTypeFunction( int bestType, int[] tmpBestScore, int biggest)
+        {            
+            if (gamesPlayed <= 5)
+            {
+                tmpBestScore[gamesPlayed - 1] = bestType;
+                for (int i = 0; i < gamesPlayed; i++)
+                {
+                    if (biggest < tmpBestScore[i])
+                    {
+                        biggest = tmpBestScore[i];
+                        return tmpBestScore[i];                       
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("This version only holds 5 attempts");
+                return -1; //error
+            }
+            return biggest;            
         }
     }
 }

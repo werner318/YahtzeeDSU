@@ -24,7 +24,7 @@ namespace Yahtzee
             get { return _total; }
             set { _total = value; }
         }
-        public int OneToSixAdd(int rollCheck, int num, int[] dice, bool block)
+        private int OneToSixAdd(int rollCheck, int num, int[] dice, bool block)
         {
             int howMany = 0;
             if (rollCheck != 0 && block == false)
@@ -117,7 +117,7 @@ namespace Yahtzee
             }
             else if (type == "yahtzee")
             {
-                for (int i = 0; i < dice.Length; i++)
+                for (int i = 0; i < diceResults.Length; i++)
                 {
                     if (diceResults[i] == 5)
                     {
@@ -133,7 +133,7 @@ namespace Yahtzee
                 _total = addDice(diceResults);
             }
         }
-        public int addDice(int[] numbers)
+        private int addDice(int[] numbers)
         {
             int score = (1 * numbers[0]) + (2 * numbers[1]) + (3 * numbers[2]) +
                             (4 * numbers[3]) + (5 * numbers[4]) + (6 * numbers[5]);

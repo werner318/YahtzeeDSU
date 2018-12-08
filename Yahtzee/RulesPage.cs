@@ -12,84 +12,82 @@ namespace Yahtzee
 {
     public partial class RulesPage : Form
     {
-        private bool isPage2Open = false;
-        private bool userBlock = false;
-        private bool isPage3Open = false;
+        private bool _isPage2Open = false;
+        private bool _userBlock = false;
+        private bool _isPage3Open = false;
         public RulesPage()
         {
             InitializeComponent();
         }
-
         private void RulesPage_Load(object sender, EventArgs e)
         {
 
         }
-
+        //timer for next pages
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (isPage2Open)
+            if (_isPage2Open)
             {
                 page2.Height = 0;
                 timer1.Stop();
-                isPage2Open = false;
+                _isPage2Open = false;
             }
-            else if (!isPage2Open)
+            else if (!_isPage2Open)
             {
                 page2.Height = 550;
                 timer1.Stop();
-                isPage2Open = true;
+                _isPage2Open = true;
             }
         }
-
+        //timer for next pages
         private void timer2_Tick(object sender, EventArgs e)
         {
-            if(isPage3Open)
+            if(_isPage3Open)
             {
                 page3.Height = 0;
                 timer2.Stop();
-                isPage3Open = false;
-                isPage2Open = true;
-                userBlock = true;
+                _isPage3Open = false;
+                _isPage2Open = true;
+                _userBlock = true;
             }
-            else if (!isPage3Open)
+            else if (!_isPage3Open)
             {
                 page3.Height = 550;
                 timer2.Stop();
-                isPage3Open = true;
+                _isPage3Open = true;
             }
         }
-
+        //method to go to next page
         private void GoToNextPage(object sender, EventArgs e)
         {
-            if (isPage2Open == false)
+            if (_isPage2Open == false)
             {
                 timer1.Start();
-                userBlock = true;
+                _userBlock = true;
                 Page1Dot.BackColor = Color.Gray;
                 Page2Dot.BackColor = Color.White;
             }
-            else if (isPage3Open == false)
+            else if (_isPage3Open == false)
             {
                 timer2.Start();
-                userBlock = true;
+                _userBlock = true;
                 Page2Dot.BackColor = Color.Gray;
                 Page3Dot.BackColor = Color.White;
             }
         }
-
+        //method to go to previous page
         private void GoToPreviousPage(object sender, EventArgs e)
         {
-            if (userBlock == true && isPage3Open == true)
+            if (_userBlock == true && _isPage3Open == true)
             {
                 timer2.Start();
-                userBlock = false;
+                _userBlock = false;
                 Page2Dot.BackColor = Color.White;
                 Page3Dot.BackColor = Color.Gray;
-
-            } else if(userBlock == true && isPage2Open == true)
+            } else if(_userBlock == true && _isPage2Open == true)
             {
                 timer1.Start();
-                userBlock = false;
+                _userBlock = false;
                 Page2Dot.BackColor = Color.Gray;
                 Page1Dot.BackColor = Color.White;
             }

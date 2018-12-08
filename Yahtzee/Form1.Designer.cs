@@ -96,6 +96,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.LogisticsLabel = new System.Windows.Forms.Label();
             this.panelDropDownList = new System.Windows.Forms.Panel();
+            this.LeaderboardsBtn = new System.Windows.Forms.Button();
             this.RulesBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dice2)).BeginInit();
@@ -336,10 +337,10 @@
             this.bonusTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.bonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bonusTextBox.ForeColor = System.Drawing.Color.Snow;
-            this.bonusTextBox.Location = new System.Drawing.Point(84, 496);
+            this.bonusTextBox.Location = new System.Drawing.Point(88, 496);
             this.bonusTextBox.Multiline = true;
             this.bonusTextBox.Name = "bonusTextBox";
-            this.bonusTextBox.Size = new System.Drawing.Size(51, 38);
+            this.bonusTextBox.Size = new System.Drawing.Size(60, 38);
             this.bonusTextBox.TabIndex = 47;
             this.bonusTextBox.Text = "0";
             this.bonusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -540,7 +541,7 @@
             // 
             this.NewGameBtn.Location = new System.Drawing.Point(14, 11);
             this.NewGameBtn.Name = "NewGameBtn";
-            this.NewGameBtn.Size = new System.Drawing.Size(113, 38);
+            this.NewGameBtn.Size = new System.Drawing.Size(116, 38);
             this.NewGameBtn.TabIndex = 61;
             this.NewGameBtn.Text = "New Game";
             this.NewGameBtn.UseVisualStyleBackColor = true;
@@ -845,7 +846,7 @@
             this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Snow;
-            this.textBox2.Location = new System.Drawing.Point(141, 496);
+            this.textBox2.Location = new System.Drawing.Point(149, 496);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(61, 38);
@@ -944,6 +945,7 @@
             // panelDropDownList
             // 
             this.panelDropDownList.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelDropDownList.Controls.Add(this.LeaderboardsBtn);
             this.panelDropDownList.Controls.Add(this.RulesBtn);
             this.panelDropDownList.Controls.Add(this.NewGameBtn);
             this.panelDropDownList.Location = new System.Drawing.Point(369, 56);
@@ -951,11 +953,21 @@
             this.panelDropDownList.Size = new System.Drawing.Size(143, 0);
             this.panelDropDownList.TabIndex = 84;
             // 
+            // LeaderboardsBtn
+            // 
+            this.LeaderboardsBtn.Location = new System.Drawing.Point(16, 107);
+            this.LeaderboardsBtn.Name = "LeaderboardsBtn";
+            this.LeaderboardsBtn.Size = new System.Drawing.Size(116, 38);
+            this.LeaderboardsBtn.TabIndex = 63;
+            this.LeaderboardsBtn.Text = "Leaderboards";
+            this.LeaderboardsBtn.UseVisualStyleBackColor = true;
+            this.LeaderboardsBtn.Click += new System.EventHandler(this.LeaderboardsBtn_Click);
+            // 
             // RulesBtn
             // 
             this.RulesBtn.Location = new System.Drawing.Point(15, 60);
             this.RulesBtn.Name = "RulesBtn";
-            this.RulesBtn.Size = new System.Drawing.Size(113, 38);
+            this.RulesBtn.Size = new System.Drawing.Size(116, 38);
             this.RulesBtn.TabIndex = 62;
             this.RulesBtn.Text = "Rules";
             this.RulesBtn.UseVisualStyleBackColor = true;
@@ -1139,6 +1151,7 @@
         public System.Windows.Forms.Panel panelDropDownList;
         public System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Button RulesBtn;
+        public System.Windows.Forms.Button LeaderboardsBtn;
     }
 }
 

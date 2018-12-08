@@ -55,6 +55,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeaderboardsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaderboardsPage.Designer.cs">
+      <DependentUpon>LeaderboardsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RulesPage.cs">
@@ -69,6 +75,9 @@
     <Compile Include="YahtzeeLogisticsMenu.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderboardsPage.resx">
+      <DependentUpon>LeaderboardsPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,6 +12,7 @@ namespace Yahtzee
 {
     public class Dice : Form1
     {
+        //constructor
         public Dice(string type, int[] diceResults, int[] dice, Image[] diceImages, int rollCheck, bool[] HoldState, bool blockUser)
         {
             if (rollCheck < 3)
@@ -27,7 +28,8 @@ namespace Yahtzee
                 }
             }
         }
-        public void RollDice(int[] diceResults, int[] dice, Image[] diceImages, bool[] HoldState)
+        //rollDice method
+        private void RollDice(int[] diceResults, int[] dice, Image[] diceImages, bool[] HoldState)
         {
             Random rand = new Random();
             ResetResults(diceResults);
@@ -60,14 +62,15 @@ namespace Yahtzee
 
             }
         }
-        public void ResetResults(int[] diceResults)
+        //reset results
+        private void ResetResults(int[] diceResults)
         {
             for (int i = 0; i < diceResults.Length; i++)
             {
                 diceResults[i] = 0;
             }
         }
-
+        //hold state constructor
         public Dice(int diceIndex, bool[] HoldState)
         {
             if (HoldState[diceIndex] == false)
