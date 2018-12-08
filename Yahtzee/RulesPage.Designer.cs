@@ -378,18 +378,18 @@
             // 
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Snow;
-            this.label20.Location = new System.Drawing.Point(156, 127);
+            this.label20.Location = new System.Drawing.Point(142, 127);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(333, 76);
+            this.label20.Size = new System.Drawing.Size(348, 63);
             this.label20.TabIndex = 67;
-            this.label20.Text = "Three of a kind + Four of a kind. It scores the sum of all the dice.";
+            this.label20.Text = "Three and Four of a kind. Scores the sum of all the dice.";
             // 
             // label4X
             // 
             this.label4X.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4X.ForeColor = System.Drawing.Color.Snow;
             this.label4X.Image = global::Yahtzee.Properties.Resources.dice_7;
-            this.label4X.Location = new System.Drawing.Point(92, 129);
+            this.label4X.Location = new System.Drawing.Point(83, 129);
             this.label4X.Name = "label4X";
             this.label4X.Size = new System.Drawing.Size(63, 61);
             this.label4X.TabIndex = 66;
@@ -400,7 +400,7 @@
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Snow;
-            this.label19.Location = new System.Drawing.Point(69, 141);
+            this.label19.Location = new System.Drawing.Point(62, 141);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(21, 41);
             this.label19.TabIndex = 65;
@@ -465,11 +465,11 @@
             // 
             // label16
             // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Snow;
             this.label16.Location = new System.Drawing.Point(104, 7);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(264, 41);
+            this.label16.Size = new System.Drawing.Size(264, 35);
             this.label16.TabIndex = 5;
             this.label16.Text = "Combinations";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -525,7 +525,7 @@
             // 
             this.label11.BackColor = System.Drawing.Color.LightBlue;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(462, 39);
+            this.label11.Location = new System.Drawing.Point(454, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 44);
             this.label11.TabIndex = 1;

@@ -65,7 +65,7 @@ namespace Yahtzee
                 dice5.Image = diceImages[dice[4]];
             }
         }               
-        //holdDice1 button
+        //holdDice1 button 
         private void holdDice1(object sender, EventArgs e)
         {
             if(rollCheck>=1) //prevent user to hold the blank images
